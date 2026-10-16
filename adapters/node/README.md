@@ -1,11 +1,13 @@
 # Agentic Workbench Node adapter
 
 This Apache-2.0 package wraps the installed `agentic` CLI. It has no runtime npm dependencies and does not implement a second policy engine.
-Check [the release status](https://github.com/ashutosh99sri-cyber/agentic-workbench/blob/main/docs/releases/0.1.0.md)
-for registry availability. Once published, install the Python CLI and this adapter:
+Version 0.1.0 is published on PyPI and npm. See the
+[release verification](https://github.com/ashutosh99sri-cyber/agentic-workbench/blob/main/docs/releases/0.1.0.md).
+Install the Python CLI in an isolated environment, then install this adapter:
 
 ```sh
-python -m pip install "agentic-workbench==0.1.0"
+python3 -m venv .venv-agentic
+.venv-agentic/bin/python -m pip install "agentic-workbench==0.1.0"
 npm install --ignore-scripts @agentic-workbench/node@0.1.0
 ```
 

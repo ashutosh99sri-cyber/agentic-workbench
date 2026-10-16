@@ -84,7 +84,9 @@ tests do not independently establish legal ownership. The repository is
 The owner is its maintainer, GitHub private vulnerability reporting is enabled,
 and the private-channel request process for conduct reports is in
 [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md). Actual hosted results remain
-visible in Actions. No registry release or stable support promise is established.
+visible in Actions. Version 0.1.0 is published on PyPI and npm; the
+[release notes](../releases/0.1.0.md) record artifact hashes, fresh consumer
+verification and remaining limits. A stable support promise is not established.
 
 Live model answer/repair quality, inference latency, token costs, cross-project
 adoption and autonomous heavy-task effectiveness remain unmeasured. Use bounded

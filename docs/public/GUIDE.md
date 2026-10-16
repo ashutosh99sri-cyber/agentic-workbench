@@ -91,7 +91,11 @@ Potential savings are fewer repeated evidence-gathering and recovery chores. Hum
 
 ## Install from a reviewed checkout
 
-There is no verified public PyPI or npm publication to install by name.
+At this guide's 15 October baseline, public registry installation was unverified.
+Version 0.1.0 was subsequently published on PyPI and npm on 17 October; use the
+[current versioned-package instructions](../../README.md#versioned-packages) and
+[release verification](../releases/0.1.0.md). The checkout procedure below remains
+available for source installation.
 
 Requirements: Python 3.11 or later. Guarded writes and runner execution require POSIX. The Node adapter requires Node 24 or later. Docker acceptance needs a trusted local daemon and an already-present approved digest image. Python-only analysis does not require Node.
 
@@ -474,7 +478,7 @@ Confirm the legal owner and intended public history; establish maintainers and p
 
 ### Version strategy
 
-The selected first version is v0.1.0 with the GitHub prerelease flag until broader acceptance is complete. Registry upload remains pending authentication and namespace ownership; see the [current release notes](../releases/0.1.0.md). Current release scripts accept plain X.Y.Z. Use v1.0.0 only after public interfaces and support expectations are stable.
+Version v0.1.0 is published on PyPI and npm, with the GitHub prerelease flag until broader acceptance is complete. See the [current release notes](../releases/0.1.0.md) for checksums, fresh consumer verification and known limits. Current release scripts accept plain X.Y.Z. Use v1.0.0 only after public interfaces and support expectations are stable.
 
 No GitHub repository URL, maintainer email, public registry release or response-time guarantee is invented. WOOKhoop.com is the verified brand website, not an established vulnerability-reporting endpoint.
 
