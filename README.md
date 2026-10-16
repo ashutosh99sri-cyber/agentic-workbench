@@ -10,8 +10,8 @@ A local framework for supervised AI-assisted development: source citations, vers
 
 [Get started](#install-from-a-reviewed-checkout) · [Repair a regression](#repair-a-regression) · [Architecture](#how-it-works) · [Integrations](#use-it-from-your-tools) · [Evidence and limits](#evidence-and-limits) · [Documentation](#documentation) · [Contribute](#contribute)
 
-**Public developer preview.** Review the source before installation. Registry
-packages and a stable release are not published. Start with the
+**Public developer preview.** Review the source before installation. Version
+0.1.0 is available on PyPI and npm; APIs remain pre-1.0. Start with the
 [developer field guide](docs/public/GUIDE.md), the
 [historical illustrated PDF guide](docs/public/WOOKhoop-Agentic-Workbench-Guide.pdf),
 or the [current preview assessment](docs/public/PUBLIC-PREVIEW.md).
@@ -34,12 +34,15 @@ The core works offline. Optional OpenAI Responses and embeddings require a confi
 
 ## Versioned packages
 
-Version **0.1.0** is the first supervised developer-preview release candidate.
-Check [the release status](docs/releases/0.1.0.md) for registry availability.
-Once the registry versions are available, the version-pinned commands are:
+Version **0.1.0** is the first supervised developer preview, published on
+[PyPI](https://pypi.org/project/agentic-workbench/0.1.0/) and
+[npm](https://www.npmjs.com/package/@agentic-workbench/node/v/0.1.0).
+Install into an isolated Python environment and pin both package versions:
 
 ```sh
-python -m pip install "agentic-workbench==0.1.0"
+python3 -m venv .venv-agentic
+.venv-agentic/bin/python -m pip install "agentic-workbench==0.1.0"
+.venv-agentic/bin/agentic --version
 npm install --ignore-scripts @agentic-workbench/node@0.1.0
 ```
 
@@ -253,7 +256,7 @@ This example assumes the project's provider is `none`, as created by `init`. Wri
 
 ### Node adapter
 
-The [Node adapter](adapters/node/README.md) wraps the installed CLI with typed methods, `shell: false`, bounded subprocesses, strict envelopes and typed errors. Build/package it locally as described in its guide; no public npm installation is assumed.
+The [Node adapter](adapters/node/README.md) wraps the installed CLI with typed methods, `shell: false`, bounded subprocesses, strict envelopes and typed errors. Install `@agentic-workbench/node@0.1.0` from npm and configure the absolute Python CLI executable; its guide also covers local builds.
 
 ```typescript
 import { Workbench } from "@agentic-workbench/node";
