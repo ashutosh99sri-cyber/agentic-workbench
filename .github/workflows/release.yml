@@ -8,6 +8,10 @@ on:
         type: string
 permissions:
   contents: read
+env:
+  # Skill files must have private inodes; Runner rejects writable host executables.
+  UV_LINK_MODE: copy
+  UV_PYTHON_PREFERENCE: only-managed
 jobs:
   prepare:
     runs-on: ubuntu-latest

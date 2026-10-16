@@ -340,7 +340,7 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md), the [Code of Conduct](CODE_OF_CON
 From a reviewed checkout, contributor checks are:
 
 ```sh
-uv sync --locked --all-extras
+UV_LINK_MODE=copy uv sync --locked --all-extras
 uv run --locked pytest -m "not docker and not distribution"
 uv run --locked ruff check src tests scripts
 uv run --locked ruff format --check src tests scripts
