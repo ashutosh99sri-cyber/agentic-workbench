@@ -115,7 +115,7 @@ jobs:
             --source-receipt "docker-python=$RUNNER_TEMP/ci-evidence/ci-docker-python/source.json" \
             --python-image "$PYTHON_IMAGE" --node-image "$NODE_IMAGE" \
             --output dist/release-receipt.json
-          sha256sum dist/* > "$RUNNER_TEMP/SHA256SUMS"
+          (cd dist && sha256sum *) > "$RUNNER_TEMP/SHA256SUMS"
           mv "$RUNNER_TEMP/SHA256SUMS" dist/SHA256SUMS
       - name: Verify the packed Node distribution from a clean consumer
         working-directory: ${{ runner.temp }}
