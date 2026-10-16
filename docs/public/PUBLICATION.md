@@ -49,11 +49,11 @@ Enable issues and the supplied templates. Use discussions when maintainers have 
 
 ## Versioning and release notes
 
-Proposed next public version: **v0.2.0**, marked as a **GitHub prerelease** until broader acceptance is complete. This is a recommendation, not an existing tag. Current release scripts validate plain `X.Y.Z` values; a GitHub prerelease flag is separate from the tag syntax. Do not create an `alpha` suffix without updating and testing that contract.
+Selected first version: **v0.1.0**, marked as a **GitHub prerelease** until broader acceptance is complete. The owner requested this versioned registry release on 17 October 2026. Registry availability and account prerequisites are recorded in the [0.1.0 notes](../releases/0.1.0.md), separately from tag/source publication. Current release scripts validate plain `X.Y.Z` values; a GitHub prerelease flag is separate from the tag syntax. Do not create an `alpha` suffix without updating and testing that contract.
 
 Use a minor version for intentional feature/API changes during the pre-1.0 period and a patch version for compatible fixes. Document API changes and migration instructions. Reserve v1.0 for defined compatibility, support and acceptance expectations. The actual version must be selected and approved with the final artifacts, rather than inferred from these notes.
 
-Use [draft release notes](RELEASE-NOTES.md) as a starting point, update them to the exact selected commit and include real checksums. Follow [the existing release procedure](../releasing.md), including its owner manifest and evidence gates. Never label a local candidate as a published release.
+Use the [current 0.1.0 release notes](../releases/0.1.0.md), bind final artifacts to the exact selected commit, and include real checksums. The [retained note outline](RELEASE-NOTES.md) is background. Follow [the existing release procedure](../releasing.md), including its owner manifest and evidence gates. Never label a local candidate as a published release.
 
 ## Adoption without unsupported claims
 

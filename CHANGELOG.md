@@ -1,5 +1,34 @@
 # Changelog
 
+## 0.1.0 — 2026-10-17
+
+First versioned developer-preview release. Registry publication is tracked separately
+from the source tag; see [release notes](docs/releases/0.1.0.md).
+
+### Added
+
+- Installable Python CLI/SDK with eight specialist roles, ten packaged skills, source
+  evidence, retrieval, bounded repair and persistent orchestration.
+- Public-ready Node adapter metadata and explicit package file allowlists; both
+  distributions carry Apache-2.0 license and applicable notices.
+- Clean npm archive consumer acceptance against the installed Python CLI.
+
+### Security
+
+- Preserve offline defaults, host grants, exact source/change/command approvals,
+  bounded tools, secret redaction and recoverable apply/rollback.
+- Retain protected-main CI gates and read-only release verification. Release
+  validation rejects mismatched Python/Node versions and private registry settings.
+
+### Compatibility and limits
+
+- Python 3.11–3.14; Node 24+. Guarded writes and Runner execution require POSIX;
+  Windows support covers the documented read-only subset.
+- Optional model requests require operator configuration and network grants. Live
+  model effectiveness and heavy-task production suitability remain unmeasured.
+
+## Pre-release development history (retained)
+
 ## Unreleased - context selection
 
 - Restore complete changed-definition coverage when fresh body chunks and direct
@@ -78,7 +107,7 @@ Static intelligence, engineering and testing results trace named Python symbols 
 
 - Add installed OpenAI SDK transport checks for all eight roles and an eight-role workflow. Transport fixtures do not establish live account/model access.
 
-## 0.1.0 — 2026-10-14
+## Local candidate baseline — 2026-10-14
 
 Initial local release candidate: Python CLI/SDK, eight independently callable agents, persisted bounded orchestration, ten original skills, source inventory/Python AST facts, cited lexical and validated embedding retrieval, scoped SQLite memory/state, optional official OpenAI Responses/tool/embedding adapter, exact proposals and POSIX guarded apply/recovery/rollback, approved Docker/explicit host tests, TypeScript CLI adapter, disposable regression examples, CI and maintainer documentation.
 

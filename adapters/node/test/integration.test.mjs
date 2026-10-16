@@ -4,7 +4,7 @@ import { appendFile, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, isAbsolute } from "node:path";
 import test from "node:test";
-import { AgenticError, Workbench } from "../dist/index.js";
+const { AgenticError, Workbench } = await import(process.env.AGENTIC_NODE_PACKAGE || "../dist/index.js");
 
 test("installed CLI: six commands use the actual subprocess and preserve source during review", async () => {
   const executable = process.env.AGENTIC_EXECUTABLE;

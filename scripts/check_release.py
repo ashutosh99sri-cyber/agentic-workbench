@@ -45,6 +45,17 @@ def release_provenance(root: Path, expected_version: str) -> dict[str, str]:
     return {"tag": tag, "commit": commits[0]}
 
 
+def node_release_metadata(root: Path, expected_version: str) -> None:
+    node = json.loads((root / "adapters/node/package.json").read_text())
+    if (
+        node["version"] != expected_version
+        or node.get("private", False) is not False
+        or node.get("publishConfig")
+        != {"access": "public", "registry": "https://registry.npmjs.org/"}
+    ):
+        raise ValueError("Node release must match the version and public registry settings")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--expected-version")
@@ -86,6 +97,7 @@ def main() -> None:
     if args.expected_version is not None:
         try:
             receipt.update(release_provenance(root, args.expected_version))
+            node_release_metadata(root, args.expected_version)
         except ValueError as error:
             parser.error(str(error))
         assert __version__ == args.expected_version

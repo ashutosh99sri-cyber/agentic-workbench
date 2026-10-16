@@ -1,6 +1,7 @@
 import importlib.metadata
 import importlib.resources
 import importlib.util
+import json
 import os
 import subprocess
 import sys
@@ -204,3 +205,30 @@ def test_tagged_release_rejects_dirty_source(tmp_path):
     path.write_text("# changed\n")
     with pytest.raises(ValueError, match="clean"):
         check_release.release_provenance(tmp_path, "1.2.3")
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        None,
+        {"version": "0.2.0"},
+        {"private": True},
+        {"private": "false"},
+        {"publishConfig": {"access": "restricted"}},
+    ],
+)
+def test_node_release_metadata_requires_matching_public_distribution(tmp_path, change):
+    node = {
+        "version": "0.1.0",
+        "publishConfig": {"access": "public", "registry": "https://registry.npmjs.org/"},
+    }
+    if change:
+        node.update(change)
+    directory = tmp_path / "adapters/node"
+    directory.mkdir(parents=True)
+    (directory / "package.json").write_text(json.dumps(node))
+    if change:
+        with pytest.raises(ValueError, match="Node release"):
+            check_release.node_release_metadata(tmp_path, "0.1.0")
+    else:
+        check_release.node_release_metadata(tmp_path, "0.1.0")

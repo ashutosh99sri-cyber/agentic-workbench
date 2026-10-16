@@ -117,6 +117,15 @@ jobs:
             --output dist/release-receipt.json
           sha256sum dist/* > "$RUNNER_TEMP/SHA256SUMS"
           mv "$RUNNER_TEMP/SHA256SUMS" dist/SHA256SUMS
+      - name: Verify the packed Node distribution from a clean consumer
+        working-directory: ${{ runner.temp }}
+        env:
+          AGENTIC_EXECUTABLE: /tmp/agentic-release/bin/agentic
+          AGENTIC_NODE_PACKAGE: '@agentic-workbench/node'
+        run: |
+          npm install --ignore-scripts --no-audit --no-fund --prefix "$RUNNER_TEMP/node-consumer" "$GITHUB_WORKSPACE"/dist/*.tgz
+          cp "$GITHUB_WORKSPACE/adapters/node/test/integration.test.mjs" "$RUNNER_TEMP/node-consumer/integration.test.mjs"
+          node --test "$RUNNER_TEMP/node-consumer/integration.test.mjs"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: verified-distributions-${{ inputs.version }}

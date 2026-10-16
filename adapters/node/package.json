@@ -1,7 +1,6 @@
 {
   "name": "@agentic-workbench/node",
   "version": "0.1.0",
-  "private": true,
   "description": "Typed subprocess adapter for the installed Agentic Workbench CLI",
   "license": "Apache-2.0",
   "type": "module",
@@ -11,8 +10,15 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist/index.js", "dist/index.d.ts", "README.md", "LICENSE"],
-  "engines": {"node": ">=24.0.0"},
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "packageManager": "npm@11.19.0",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -22,5 +28,18 @@
   "devDependencies": {
     "@types/node": "26.6.5",
     "typescript": "7.0.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashutosh99sri-cyber/agentic-workbench.git",
+    "directory": "adapters/node"
+  },
+  "homepage": "https://github.com/ashutosh99sri-cyber/agentic-workbench#readme",
+  "bugs": {
+    "url": "https://github.com/ashutosh99sri-cyber/agentic-workbench/issues"
   }
 }
