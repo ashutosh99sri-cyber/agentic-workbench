@@ -2,7 +2,7 @@
 
 Start with a small, reproducible issue or documentation correction. For a larger interface or security change, describe the affected callers, trust boundary, tests and compatibility before implementation. Keep core policy independent of providers/frameworks, preserve the v1 envelope and actual source citations, and follow the module specifications and dependency map in `docs/design/`.
 
-Follow the [community conduct policy](CODE_OF_CONDUCT.md). Contribute only material you have the right to share under the project's stated license. Identify copied or adapted third-party material, its source, license and required notices; do not replace its terms with a project ownership claim. See the [licensing guide](docs/public/LICENSING.md) and [third-party notices](THIRD_PARTY_NOTICES.md). The owner must confirm distribution rights and real private reporting channels before public release.
+Follow the [community conduct policy](CODE_OF_CONDUCT.md). Contribute only material you have the right to share under the project's stated license. Identify copied or adapted third-party material, its source, license and required notices; do not replace its terms with a project ownership claim. See the [licensing guide](docs/public/LICENSING.md) and [third-party notices](THIRD_PARTY_NOTICES.md). The owner must confirm distribution rights and security reporting and conduct intake procedures before public release.
 
 From a checkout on Linux or macOS with Python 3.11+ and uv installed, use the committed lockfile:
 

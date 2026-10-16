@@ -22,16 +22,20 @@ or to retaliate against someone who raises a concern in good faith.
 
 ## Reporting and response
 
-Report conduct concerns privately to
-[ashutosh99.sri@gmail.com](mailto:ashutosh99.sri@gmail.com), the contact explicitly
-authorized by the repository owner for this purpose. The responsible maintainer
-is [@ashutosh99sri-cyber](https://github.com/ashutosh99sri-cyber).
+The responsible maintainer is
+[@ashutosh99sri-cyber](https://github.com/ashutosh99sri-cyber). Use a private channel
+that the maintainers have already shared with you. If you do not have one,
+[request a private channel in an issue](https://github.com/ashutosh99sri-cyber/agentic-workbench/issues/new?title=Private%20conduct%20contact%20requested).
+That request is public: include only a request for contact, without incident
+details, names, credentials, or other personal information. Maintainers must
+establish a private channel before asking for the report.
 
-Include relevant links, a concise description and only the personal information
-needed to understand the incident. Keep private reports and sensitive evidence
-out of public issues. Suspected vulnerabilities use the separate GitHub private
-reporting process in [SECURITY.md](SECURITY.md). Owner authorization of this
-contact does not establish a response-time guarantee or tested mail delivery.
+Once a private channel is established, include relevant links, a concise
+description and only the personal information needed to understand the incident.
+Keep reports and sensitive evidence out of public issues. Suspected vulnerabilities
+use the separate GitHub private reporting process in [SECURITY.md](SECURITY.md).
+This conduct intake process does not provide a standing private contact address
+or guarantee channel availability or a response time.
 
 Assigned maintainers should review reports fairly, limit access to sensitive
 evidence, and decide an appropriate response based on the conduct and its impact.

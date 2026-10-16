@@ -3,7 +3,7 @@
 The owner approved a public current-source snapshot at
 [ashutosh99sri-cyber/agentic-workbench](https://github.com/ashutosh99sri-cyber/agentic-workbench)
 on 17 October 2026, including Apache-2.0 distribution rights, WOOKhoop branding,
-maintainer responsibility and the separately documented conduct contact. GitHub
+maintainer responsibility and the documented conduct intake procedure. GitHub
 private vulnerability reporting is enabled. Earlier development history remains
 local. Actual source identity and hosted acceptance are visible in GitHub;
 [readiness](READINESS.md) retains the local evidence and limits.
