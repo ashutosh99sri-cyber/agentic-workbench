@@ -1,9 +1,9 @@
-# Draft initial WOOKhoop release notes
+# Retained release-note outline
 
 These notes concern a future tagged prerelease, separate from the owner-approved
 [public source preview](PUBLICATION.md). No tagged or registry release is claimed.
 
-Proposed version: **v0.2.0**, GitHub prerelease. **Unpublished; version, destination and artifacts require approval.** Replace this status only after the actual release exists.
+The selected first version is **v0.1.0**. Use the [current release notes](../releases/0.1.0.md) for status and installation. This retained outline is background, not a registry-publication receipt.
 
 WOOKhoop Agentic Workbench brings source inspection, reviewed changes, approved commands and durable recovery into a Python framework for supervised engineering workflows.
 

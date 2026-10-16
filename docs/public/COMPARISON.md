@@ -28,6 +28,6 @@ Retained Workbench evidence covers **869 offline tests and 8 actual Docker accep
 
 There is no established comparative task-success, time-saving, cost-saving or live-model quality result in this release record. Choose a representative task, define the same acceptance condition for each candidate tool, record provider/model/version/cost settings, and distinguish a proposed patch from an approved passing check. See [validation](../validation.md), [repair evaluation](../python-repair-evaluation.md) and [release readiness](READINESS.md).
 
-Workbench remains a **local alpha with publication gates**. The proposed future `v0.2.0` tag and GitHub prerelease designation are a release plan, not an existing release. Review [publication requirements](PUBLICATION.md) and the [roadmap](ROADMAP.md).
+Workbench is a **public supervised developer preview**. The selected first version is `v0.1.0`, with a GitHub prerelease designation; registry availability remains pending account authentication and npm namespace ownership. See the [current release notes](../releases/0.1.0.md). Review [publication requirements](PUBLICATION.md) and the [roadmap](ROADMAP.md).
 
 [Back to the README](../../README.md) · [Developer field guide](GUIDE.md) · [PDF guide](WOOKhoop-Agentic-Workbench-Guide.pdf)

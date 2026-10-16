@@ -161,3 +161,13 @@ def test_installed_consumer_typing_and_walkthrough_are_release_gates() -> None:
         assert f"AGENTIC_INSTALLED_PYTHON: /tmp/{environment}/bin/python" in gate
         assert f"/tmp/{environment}/bin/python examples/sdk_walkthrough.py --execute" in gate  # noqa: S108 - fixed CI assertion; creates no files
         assert "continue-on-error" not in gate
+
+
+def test_release_verifies_the_packed_node_distribution_without_install_scripts() -> None:
+    gate = block(RELEASE, "      - name: Verify the packed Node distribution from a clean consumer")
+    assert "working-directory: ${{ runner.temp }}" in gate
+    assert "npm install --ignore-scripts" in gate
+    assert '"$GITHUB_WORKSPACE"/dist/*.tgz' in gate
+    assert "AGENTIC_NODE_PACKAGE: '@agentic-workbench/node'" in gate
+    assert 'node --test "$RUNNER_TEMP/node-consumer/integration.test.mjs"' in gate
+    assert "continue-on-error" not in gate and "if:" not in gate

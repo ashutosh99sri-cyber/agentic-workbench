@@ -474,7 +474,7 @@ Confirm the legal owner and intended public history; establish maintainers and p
 
 ### Version strategy
 
-Proposed next release: v0.2.0 with the GitHub prerelease flag until broader acceptance is complete. This is a recommendation, not an existing tag. Current release scripts accept plain X.Y.Z. Use v1.0.0 only after public interfaces and support expectations are stable.
+The selected first version is v0.1.0 with the GitHub prerelease flag until broader acceptance is complete. Registry upload remains pending authentication and namespace ownership; see the [current release notes](../releases/0.1.0.md). Current release scripts accept plain X.Y.Z. Use v1.0.0 only after public interfaces and support expectations are stable.
 
 No GitHub repository URL, maintainer email, public registry release or response-time guarantee is invented. WOOKhoop.com is the verified brand website, not an established vulnerability-reporting endpoint.
 

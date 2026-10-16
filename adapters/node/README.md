@@ -1,6 +1,15 @@
 # Agentic Workbench Node adapter
 
-This private Apache-2.0 package wraps the installed `agentic` CLI. It has no runtime npm dependencies and does not implement a second policy engine. Install the Python package first, then build locally:
+This Apache-2.0 package wraps the installed `agentic` CLI. It has no runtime npm dependencies and does not implement a second policy engine.
+Check [the release status](https://github.com/ashutosh99sri-cyber/agentic-workbench/blob/main/docs/releases/0.1.0.md)
+for registry availability. Once published, install the Python CLI and this adapter:
+
+```sh
+python -m pip install "agentic-workbench==0.1.0"
+npm install --ignore-scripts @agentic-workbench/node@0.1.0
+```
+
+For a source checkout or local artifact, install the Python package first, then build locally:
 
 ```sh
 npm ci --ignore-scripts
@@ -10,7 +19,7 @@ npm test
 
 The independent lockfile pins TypeScript 7.0.2 and `@types/node` 26.6.5, verified through the official npm registry. `packageManager` pins the observed npm 11.19.0. The supported runtime is Node 24 or newer; CI targets the declared minimum 24.0.0 and 26.7.0. No global tooling, install scripts, npm publication, or paid provider calls are required.
 
-To use this private package in another application, build it above, then create a local archive:
+To use this package in another application, build it above, then create a local archive:
 
 ```sh
 npm pack --ignore-scripts
@@ -100,4 +109,4 @@ AGENTIC_EXECUTABLE=/absolute/clean-venv/bin/agentic npm run test:integration
 This check creates a disposable workspace, calls all six required commands, imports a real proposal, verifies apply/test dry-runs and wrong-approval denial, and checks source preservation. Missing `AGENTIC_EXECUTABLE` fails the check explicitly. It does not execute repository tests, approve a source change, call providers, or prove Docker isolation; the full repository acceptance flow covers those capabilities. Build before either test command. `npm audit` checks the independent authoritative lockfile.
 # Harness interoperability
 
-The same installed Python CLI now backs `execute(instruction, options)`, `cancel(taskId)`, `trace(taskId)`, `tools()`, `skills()`, `context(query, options)` and `impact(changedPaths, limit)`. `ContextOptions` and `SearchOptions` expose the source-selection and retrieval options described above. ExecutionOptions separates `approve` for source changes and `approveTest` for the exact command/snapshot; `taskId` resumes with the same options. A selected proposal requires `commandId`. Command execution keeps Docker or explicit `trustedHost`; model/network options stay host-owned. Custom planners, providers and tool handlers register in the trusted Python host. See the [harness guide](../../docs/harness.md).
+The same installed Python CLI now backs `execute(instruction, options)`, `cancel(taskId)`, `trace(taskId)`, `tools()`, `skills()`, `context(query, options)` and `impact(changedPaths, limit)`. `ContextOptions` and `SearchOptions` expose the source-selection and retrieval options described above. ExecutionOptions separates `approve` for source changes and `approveTest` for the exact command/snapshot; `taskId` resumes with the same options. A selected proposal requires `commandId`. Command execution keeps Docker or explicit `trustedHost`; model/network options stay host-owned. Custom planners, providers and tool handlers register in the trusted Python host. See the [harness guide](https://github.com/ashutosh99sri-cyber/agentic-workbench/blob/main/docs/harness.md).

@@ -125,11 +125,25 @@ def test_existing_workspace_is_refused_without_touching_it(tmp_path: Path, kind:
         workspace.write_text("keep")
     else:
         workspace.symlink_to(tmp_path / "missing", target_is_directory=True)
+        os.utime(workspace, ns=(1, workspace.lstat().st_mtime_ns), follow_symlinks=False)
     before = workspace.lstat()
     run = run_walkthrough(tmp_path, "--trusted-host", "--workspace", str(workspace))
     assert run.returncode == 2, run.stdout + run.stderr
     assert "existing path or symlink" in run.stderr
-    assert workspace.lstat() == before
+    after = workspace.lstat()
+    # Kernel symlink lookup may advance access time without modifying the path.
+    for field in (
+        "st_dev",
+        "st_ino",
+        "st_mode",
+        "st_nlink",
+        "st_uid",
+        "st_gid",
+        "st_size",
+        "st_mtime_ns",
+        "st_ctime_ns",
+    ):
+        assert getattr(after, field) == getattr(before, field), field
     if kind == "directory":
         assert list(workspace.iterdir()) == [workspace / "keep.txt"]
         assert (workspace / "keep.txt").read_text() == "keep"
@@ -137,6 +151,7 @@ def test_existing_workspace_is_refused_without_touching_it(tmp_path: Path, kind:
         assert workspace.read_text() == "keep"
     else:
         assert workspace.is_symlink()
+        assert workspace.readlink() == tmp_path / "missing"
         assert not (tmp_path / "missing").exists()
 
 

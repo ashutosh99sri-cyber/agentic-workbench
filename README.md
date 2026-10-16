@@ -32,6 +32,21 @@ Use Workbench when a development task needs a clear connection between the sourc
 
 The core works offline. Optional OpenAI Responses and embeddings require a configured model, an external credential and an explicit network grant. Static analysis is labeled `static`; lexical, semantic and combined retrieval are identified separately. See [how this project's role compares with other tools](docs/public/COMPARISON.md).
 
+## Versioned packages
+
+Version **0.1.0** is the first supervised developer-preview release candidate.
+Check [the release status](docs/releases/0.1.0.md) for registry availability.
+Once the registry versions are available, the version-pinned commands are:
+
+```sh
+python -m pip install "agentic-workbench==0.1.0"
+npm install --ignore-scripts @agentic-workbench/node@0.1.0
+```
+
+The Node package requires the Python CLI; it does not install Python or bypass
+its policies. The source and local artifact installation below work independently
+of registry availability. See [0.1.0 release notes](docs/releases/0.1.0.md).
+
 ## Install from a reviewed checkout
 
 Requires **Python 3.11+**. Guarded source changes and command execution require POSIX. Python-only analysis does not require Node; the optional Node adapter requires **Node 24+**.
@@ -238,7 +253,7 @@ This example assumes the project's provider is `none`, as created by `init`. Wri
 
 ### Node adapter
 
-The [private local Node package](adapters/node/README.md) wraps the installed CLI with typed methods, `shell: false`, bounded subprocesses, strict envelopes and typed errors. Build/package it locally as described in its guide; no public npm installation is assumed.
+The [Node adapter](adapters/node/README.md) wraps the installed CLI with typed methods, `shell: false`, bounded subprocesses, strict envelopes and typed errors. Build/package it locally as described in its guide; no public npm installation is assumed.
 
 ```typescript
 import { Workbench } from "@agentic-workbench/node";
@@ -358,4 +373,4 @@ Native parser, clean installed-consumer and actual Docker acceptance have separa
 
 Authored code and bundled instructions are offered under [Apache-2.0](LICENSE), subject to the repository's [NOTICE](NOTICE), [third-party notices](THIRD_PARTY_NOTICES.md) and [source provenance](docs/design/SOURCE-PROVENANCE.md). The engineering skill's decision order is adapted from the MIT-licensed [Ponytail](https://github.com/DietrichGebert/ponytail). The owner confirmed distribution and WOOKhoop brand rights for this source preview. Branding does not change package identifiers or third-party rights.
 
-**`v0.2.0` is a proposed future tag**, with a GitHub prerelease designation proposed for that release. It is not an existing tag or published version claim. A tagged or registry release still requires exact-commit hosted acceptance, registry ownership and explicit artifact approval. The source-preview approval does not approve future releases. Follow the [publication record and release procedure](docs/public/PUBLICATION.md) and [roadmap](docs/public/ROADMAP.md).
+**`v0.1.0` is the selected first developer-preview release.** Registry availability is reported separately in the [release notes](docs/releases/0.1.0.md); a tag or GitHub release alone does not establish a PyPI/npm upload. Later releases require their own exact-commit acceptance and release authorization. Follow the [publication record and release procedure](docs/public/PUBLICATION.md) and [roadmap](docs/public/ROADMAP.md).
