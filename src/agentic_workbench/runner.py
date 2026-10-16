@@ -73,7 +73,14 @@ def _kill(process: subprocess.Popen[bytes]) -> None:
     except ProcessLookupError:
         pass
     except PermissionError:
-        if process.poll() is None:
+        try:
+            # Darwin can report EPERM for a zombie-only group until its leader is reaped.
+            process.wait(timeout=5)
+            if os.name == "posix":
+                os.killpg(process.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        except (PermissionError, subprocess.TimeoutExpired):
             raise WorkbenchError(
                 "EXECUTION_ERROR", "The execution process group could not be terminated"
             ) from None
@@ -122,8 +129,6 @@ def _capture(argv: list[str], cwd: Path, timeout: int, maximum: int) -> dict[str
             remaining = deadline - time.monotonic()
             if overflow.is_set() or remaining <= 0:
                 timed_out = remaining <= 0 and not overflow.is_set()
-                _kill(process)
-                process.wait(timeout=5)
                 break
             overflow.wait(min(0.05, remaining))
     finally:

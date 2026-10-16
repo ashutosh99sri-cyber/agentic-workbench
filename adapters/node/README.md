@@ -1,14 +1,14 @@
 # Agentic Workbench Node adapter
 
 This Apache-2.0 package wraps the installed `agentic` CLI. It has no runtime npm dependencies and does not implement a second policy engine.
-Version 0.1.0 is published on PyPI and npm. See the
-[release verification](https://github.com/ashutosh99sri-cyber/agentic-workbench/blob/main/docs/releases/0.1.0.md).
+Version 0.1.1 is a supervised developer preview. See the
+[release record](https://github.com/ashutosh99sri-cyber/agentic-workbench/blob/main/docs/releases/0.1.1.md).
 Install the Python CLI in an isolated environment, then install this adapter:
 
 ```sh
 python3 -m venv .venv-agentic
-.venv-agentic/bin/python -m pip install "agentic-workbench==0.1.0"
-npm install --ignore-scripts @agentic-workbench/node@0.1.0
+.venv-agentic/bin/python -m pip install "agentic-workbench==0.1.1"
+npm install --ignore-scripts @agentic-workbench/node@0.1.1
 ```
 
 For a source checkout or local artifact, install the Python package first, then build locally:
@@ -30,7 +30,7 @@ npm pack --ignore-scripts
 From the consumer application's directory, install the resulting archive:
 
 ```sh
-npm install --ignore-scripts /absolute/path/to/agentic-workbench-node-0.1.0.tgz
+npm install --ignore-scripts /absolute/path/to/agentic-workbench-node-0.1.1.tgz
 ```
 
 Use the filename printed by `npm pack` if its version differs. The consumer must also have the Python package installed; select its absolute `agentic` executable as shown below. On Windows the executable is typically `C:\path\to\venv\Scripts\agentic.exe`, and the Python runtime supports read-only operations. Guarded source mutation and command execution require POSIX.

@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.1.1 — prepared 2026-10-17
+
+Patch candidate; registry publication remains a separate authorized action.
+See the [candidate record](docs/releases/0.1.1.md).
+
+### Fixed
+
+- Handle the macOS exited-process-group race: after `EPERM`, wait for the owned
+  parent within five seconds, then retry group termination. Persistent denial or
+  a live-parent timeout still fails. Runner and TypeScript use the same helper;
+  stdio MCP cleanup now reuses it too. Retain unconditional final cleanup.
+- Use a concise registry README with absolute links for Python package metadata,
+  and align the Node package/lockfile and candidate instructions at 0.1.1.
+
+### Security and compatibility
+
+- No dependency, approval schema, grant, executable-ownership check, source-write
+  policy, Docker isolation flag or credential-handling change. A denied group
+  signal is no longer ignored solely because the parent has exited.
+- Keep the immutable 0.1.0 tag and registry artifacts. The historical PDF and
+  source-provenance ledger retain their original scope; this patch changes two
+  runtime files and is verified against its own candidate source.
+
 ## 0.1.0 — 2026-10-17
 
 First versioned developer-preview release. Registry publication is tracked separately

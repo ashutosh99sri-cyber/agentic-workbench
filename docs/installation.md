@@ -2,6 +2,12 @@
 
 Install the Python package into a dedicated project environment as shown in the README. You can also install a built wheel with `python -m pip install /absolute/path/to/agentic_workbench-0.1.0-py3-none-any.whl`. The package ships JSON schemas and ten original skill packages. Run `agentic --version` from outside this checkout to verify the installed entry point.
 
+The [0.1.1 candidate record](releases/0.1.1.md) covers local installation of the
+new candidate. Registry version 0.1.0 remains available until a separate 0.1.1
+publication is authorized and verified. Package descriptions use the concise
+[registry README](package-readme.md), with absolute documentation links that also
+work outside GitHub. This does not replace the full source README or historical guides.
+
 `agentic init --root /absolute/path/to/application` creates private `.agentic/` state. It does not rewrite source or replace valid existing settings. Ignore that directory in Git. Configuration is TOML, schema version 1. Unknown keys, credential values used as model names, shell command strings and permission fields are rejected. Credentials belong in the host process environment; do not place them in this repository, proposal JSON or conversation.
 
 For a clean installed SDK acceptance example, run the repository's
@@ -57,3 +63,8 @@ Inspect the returned `proposals` diff/digest. `agentic apply PROPOSAL_ID --root 
 Configure a named test command. For Python use an absolute isolated Python executable plus `-m unittest -q`; no automatic package installation occurs. Docker commands use container executables and require an approved present digest-pinned image. Review and execute with `agentic test --command-id unit`; use `--trusted-host` only when consciously accepting host execution. Read-only snapshots may require your test configuration to put build/cache output in `/tmp`.
 
 Maintainers use `UV_LINK_MODE=copy uv sync --locked --all-extras`. uv installs must use copy mode because the skill loader rejects hard-linked files; use `UV_LINK_MODE=copy uv pip install ...` for clean consumers too. See the [uv link-mode setting](https://docs.astral.sh/uv/reference/settings/#link-mode). Hosted CI selects managed Python so its executable meets Runner ownership and non-writable-by-group/others requirements; a rejected host executable must be replaced with a trusted installation, without weakening the guard. Some macOS synchronized Documents locations can mark editable `.pth` files hidden and prevent Python imports. A clean wheel installation or a task-local environment outside the synchronized folder avoids that issue without changing global flags or shell configuration. The delivered wheel was tested in a separate environment.
+
+Version 0.1.1 handles the macOS group-exit race by reaping the owned parent with a
+five-second bound and retrying the group signal. A persistent permission denial
+still reports `EXECUTION_ERROR`; it does not authorize a backend fallback or count
+as a passing check. Executable ownership and write-permission checks remain unchanged.

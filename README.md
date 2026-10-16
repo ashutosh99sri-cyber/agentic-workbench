@@ -34,6 +34,10 @@ The core works offline. Optional OpenAI Responses and embeddings require a confi
 
 ## Versioned packages
 
+Version **0.1.1** is being prepared with a macOS process-cleanup correction and
+registry documentation fixes. See its [candidate record](docs/releases/0.1.1.md).
+The currently published registry version remains 0.1.0.
+
 Version **0.1.0** is the first supervised developer preview, published on
 [PyPI](https://pypi.org/project/agentic-workbench/0.1.0/) and
 [npm](https://www.npmjs.com/package/@agentic-workbench/node/v/0.1.0).
