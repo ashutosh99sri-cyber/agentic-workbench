@@ -1,0 +1,2 @@
+# Preserve binary document bytes and keep Git from treating PDF syntax as text.
+*.pdf binary

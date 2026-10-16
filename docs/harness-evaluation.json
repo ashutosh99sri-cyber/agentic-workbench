@@ -1,0 +1,66 @@
+{
+  "live_model_quality_evaluated": false,
+  "mode": "offline-host-fixtures",
+  "schema_version": 1,
+  "summary": {
+    "elapsed_ms": 296.354,
+    "estimated_cost_usd": 0,
+    "failed": 1,
+    "input_tokens": 0,
+    "model_requests": 0,
+    "output_tokens": 0,
+    "recovered": 1,
+    "solved": 2,
+    "total": 3
+  },
+  "tasks": [
+    {
+      "elapsed_ms": 75.567,
+      "error_code": null,
+      "estimated_cost_usd": 0,
+      "id": "already-correct",
+      "input_tokens": 0,
+      "model_requests": 0,
+      "output_tokens": 0,
+      "recovered": false,
+      "replans": 0,
+      "solved": true,
+      "source_mutations": 0,
+      "state": "succeeded",
+      "steps": 1,
+      "verification_exit_code": 0
+    },
+    {
+      "elapsed_ms": 152.023,
+      "error_code": null,
+      "estimated_cost_usd": 0,
+      "id": "repair-resume",
+      "input_tokens": 0,
+      "model_requests": 0,
+      "output_tokens": 0,
+      "recovered": true,
+      "replans": 1,
+      "solved": true,
+      "source_mutations": 1,
+      "state": "succeeded",
+      "steps": 3,
+      "verification_exit_code": 0
+    },
+    {
+      "elapsed_ms": 68.764,
+      "error_code": "REPLAN_EXHAUSTED",
+      "estimated_cost_usd": 0,
+      "id": "unrepaired",
+      "input_tokens": 0,
+      "model_requests": 0,
+      "output_tokens": 0,
+      "recovered": false,
+      "replans": 0,
+      "solved": false,
+      "source_mutations": 0,
+      "state": "failed",
+      "steps": 1,
+      "verification_exit_code": 1
+    }
+  ]
+}

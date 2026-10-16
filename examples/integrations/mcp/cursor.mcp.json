@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agentic": {
+      "command": "/absolute/path/to/venv/bin/agentic",
+      "args": ["mcp", "--root", "/absolute/path/to/application", "--provider", "none"]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "public_only_incomplete_patch": {
+    "task_id": "more-itertools-batch-limits",
+    "path": "more_itertools/more.py",
+    "needle": "    if max_size <= 0:\n        raise ValueError('maximum size must be greater than zero')\n",
+    "replacement": "    if max_size <= 0:\n        raise ValueError('maximum size must be greater than zero')\n    if max_count == 0:\n        raise ValueError('maximum count must be greater than zero')\n"
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "archives": [
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "19ddb972845ab0e5b9b7449d3fd5930781407441",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/19ddb972845ab0e5b9b7449d3fd5930781407441",
+      "sha256": "ad97519f8294dfe626a6c029f70dca0133ebd1ef935aeeb24fc2138ebcdba905",
+      "bytes": 160303
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "1ea82a711c69f590054987b5cb194157f8ce8ac4",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/1ea82a711c69f590054987b5cb194157f8ce8ac4",
+      "sha256": "a8de21bd320e514096104ba2095218d49a3c3961e2452e5c11f823c9a81b9d3c",
+      "bytes": 162714
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "5d946b3590bfe92f1465c1b9b9830dd434745c84",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/5d946b3590bfe92f1465c1b9b9830dd434745c84",
+      "sha256": "5815efe65bd9e27063e07104c476df893ca12b5f52233effe12543e6da380624",
+      "bytes": 156272
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "67fcf640477c78605580f5ee703a54c73c1e7a8a",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/67fcf640477c78605580f5ee703a54c73c1e7a8a",
+      "sha256": "82671a4c72d0cc55a50860257d1547a00bb9fb2d5eee6f1853b2901c92ca0a5f",
+      "bytes": 163068
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "6b1907de293a655fb77881bf81948f95fd15bd7c",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/6b1907de293a655fb77881bf81948f95fd15bd7c",
+      "sha256": "3ff797d7af6197ff5f697f7a6e48002541c6f992bf806d1df97cc1d1bcf866e6",
+      "bytes": 160434
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "9ed3dbb0ae527230cd156d91d0af305478558fba",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/9ed3dbb0ae527230cd156d91d0af305478558fba",
+      "sha256": "da0afef9e9da94b6ac988772953d0e93b36008aea0bbafd4d069a3f26ef7f540",
+      "bytes": 160534
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "ca711220a6657a22655f6fa497524d006a735c5f",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/ca711220a6657a22655f6fa497524d006a735c5f",
+      "sha256": "3065e15fffb1ba065454fb1943048b61abca511d5076867999179321869b75de",
+      "bytes": 160304
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "cb75bb9c55f7ed3e77ce599097e1ba8da411746d",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/cb75bb9c55f7ed3e77ce599097e1ba8da411746d",
+      "sha256": "41fe8319efa12487731047fd7a905f9a55803be2ee0ec3594e142f85e1fee94c",
+      "bytes": 156415
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "d032cab7798c7a072ecbb8ade4dfa50030c75cb5",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/d032cab7798c7a072ecbb8ade4dfa50030c75cb5",
+      "sha256": "e4af13053f043f38c183fb498aa0bb27a49bd6ad1f5f9a6a59353ecca913d96f",
+      "bytes": 160327
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "d992be0de9383ddcaae3a24866a2d96b52132b07",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/d992be0de9383ddcaae3a24866a2d96b52132b07",
+      "sha256": "97aead57062c8f36aafad7b504baeb851041ab5120352f62ada8290ef960a685",
+      "bytes": 156578
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "def2dabea858b6ecb84ee0c52e6e07929f2c409c",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/def2dabea858b6ecb84ee0c52e6e07929f2c409c",
+      "sha256": "c8b5474cb9ff1b8ac011b9de701a0cf7284c0575a035b808feaf488d2d175848",
+      "bytes": 161047
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "f51a53bfd2fe9504063a33ef5f4a73e30d82d0e2",
+      "url": "https://codeload.github.com/more-itertools/more-itertools/zip/f51a53bfd2fe9504063a33ef5f4a73e30d82d0e2",
+      "sha256": "6c715dd7cb2d43abfc249e52d72bb03a857c9b5664cd597019c0193cfd5628e1",
+      "bytes": 156306
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
+      "url": "https://codeload.github.com/pallets/click/zip/07c909f23f0f83b5ca137c167b9a134d66201f67",
+      "sha256": "805a00cdc2b1c490c02e75d71bd076d475ab20fbe4f3e762679d8c706b0b5359",
+      "bytes": 545560
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "420c8fb44eeadb537cae69d2fee3796e808558dd",
+      "url": "https://codeload.github.com/pallets/click/zip/420c8fb44eeadb537cae69d2fee3796e808558dd",
+      "sha256": "505860a5982cf7838cf790bafb7addaa26bd27a76e15fc3a380746d8ebe98203",
+      "bytes": 567038
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "648d7c403829013ade629d63ddbfe808f6b2b770",
+      "url": "https://codeload.github.com/pallets/click/zip/648d7c403829013ade629d63ddbfe808f6b2b770",
+      "sha256": "b06b91c715c4d94f91b13d7aa7c2f24c6d7baf14bdae58e07c04b7b2cf3ebcc5",
+      "bytes": 530865
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+      "url": "https://codeload.github.com/pallets/click/zip/6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+      "sha256": "1617e06530c9170d68b8dfbe9ef0ceb96d7daabfc3d4fa2c71fede0dac760a82",
+      "bytes": 582279
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "762c97eef7c1b3779678992f26a553a2a8c80793",
+      "url": "https://codeload.github.com/pallets/click/zip/762c97eef7c1b3779678992f26a553a2a8c80793",
+      "sha256": "5dfe4ec8e74f1992b8a6281bf03ba7eb53c8cd19386f85960148435039d2e1fd",
+      "bytes": 536058
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
+      "url": "https://codeload.github.com/pallets/click/zip/7925a3410d7098c28cfca3b2baa6c852666bbd14",
+      "sha256": "7479ff2c1faf6ac9f28b48d9153a6a8cfe7f02f964231dd10b6e1ca465447479",
+      "bytes": 544841
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "82f377c547e1867d073f02bb8f476214d07e245b",
+      "url": "https://codeload.github.com/pallets/click/zip/82f377c547e1867d073f02bb8f476214d07e245b",
+      "sha256": "71c81c6935ef1a798a7292a25cd65460539eae9ce4e0ce34c2a55aee3099796e",
+      "bytes": 531192
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "8929d392781c8113bc569f388c15c47b94f86581",
+      "url": "https://codeload.github.com/pallets/click/zip/8929d392781c8113bc569f388c15c47b94f86581",
+      "sha256": "978e7d19b60257a68c6aa6dd1ae3d62da568cd9ce587ba289f10da1df31f33a0",
+      "bytes": 535467
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "8c1a0a7abbc1c36f70d1f65f3604acc46c5ce6ab",
+      "url": "https://codeload.github.com/pallets/click/zip/8c1a0a7abbc1c36f70d1f65f3604acc46c5ce6ab",
+      "sha256": "d63c5fdfcc5d3069a52b3d1d4bbf4fcb863d6a9f3218f63377d95491236a78d7",
+      "bytes": 548473
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "b67832c2167e5b0ff6764a8c04a0a9087e697b5a",
+      "url": "https://codeload.github.com/pallets/click/zip/b67832c2167e5b0ff6764a8c04a0a9087e697b5a",
+      "sha256": "332887217d81605ef45e8ab83823aac9b62caf6410d0cef7166ec3c8a388be38",
+      "bytes": 550256
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "f58ca3e81424a35626c8a475eb59ab95589008ce",
+      "url": "https://codeload.github.com/pallets/click/zip/f58ca3e81424a35626c8a475eb59ab95589008ce",
+      "sha256": "06bba4231892d2e82d7a9007dc01226d2c1eb778f5f49b6bea74e2b9b4bb0eab",
+      "bytes": 567598
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+      "url": "https://codeload.github.com/pallets/click/zip/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+      "sha256": "a0fa912d8f6e6d4405f831e9b97b4a430ad7dddaaf8e42ef4690033a57d28c9e",
+      "bytes": 582737
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "022ae6c6fe5c2ef9615875d0ecfab1ae4024720f",
+      "url": "https://codeload.github.com/pypa/packaging/zip/022ae6c6fe5c2ef9615875d0ecfab1ae4024720f",
+      "sha256": "e72dedaa4e33dfd177cc10d5855acae5acf5ecbd3b7d5bbe6416f957adc553ad",
+      "bytes": 411983
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "0625596e502163179b9a82796aee82c178efc16d",
+      "url": "https://codeload.github.com/pypa/packaging/zip/0625596e502163179b9a82796aee82c178efc16d",
+      "sha256": "24fd4fb8980021cb803685f35ee80950168c6d72d4e7ee201ed63771cb71d087",
+      "bytes": 412193
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "08bb047794f4e70b157dacef4538b3a6e3492743",
+      "url": "https://codeload.github.com/pypa/packaging/zip/08bb047794f4e70b157dacef4538b3a6e3492743",
+      "sha256": "aec9a1f384d1ff4c11f6fae66e0ecc1d56a37f01d77acb44afe89a69e5e6d78c",
+      "bytes": 320851
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "0a85b41e24c9b55b83f05ae696d73e8294a5b094",
+      "url": "https://codeload.github.com/pypa/packaging/zip/0a85b41e24c9b55b83f05ae696d73e8294a5b094",
+      "sha256": "8ce8da7ef69c3c88ed659144bb0f670ae55957f7e15443ecb0326bbf1ceb354c",
+      "bytes": 367757
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+      "url": "https://codeload.github.com/pypa/packaging/zip/1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+      "sha256": "f7d4dc40f98e1b64bd92ecf7dbf9732529b6561472754c2a5ae15a86e80ec268",
+      "bytes": 380817
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "1f334c04c6918789974207733f194e11a47698f5",
+      "url": "https://codeload.github.com/pypa/packaging/zip/1f334c04c6918789974207733f194e11a47698f5",
+      "sha256": "a35999a88672505deca30baffbbb6ce11fcff333ddc77b88de81185533ff04f9",
+      "bytes": 411921
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "20262cf73c9a3b55eea0ce305fb5a8111911ef3c",
+      "url": "https://codeload.github.com/pypa/packaging/zip/20262cf73c9a3b55eea0ce305fb5a8111911ef3c",
+      "sha256": "96721a4f4924d9f8e178a552440216cf4e696b54b94676b32814ebc57a79affd",
+      "bytes": 319679
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "2497782b2bb03812d2a12ae882a4390c61ec5061",
+      "url": "https://codeload.github.com/pypa/packaging/zip/2497782b2bb03812d2a12ae882a4390c61ec5061",
+      "sha256": "fa883f0742a3473fa5d284b0543e3f1755fe33426666dfb974a0d885e0e9e5ec",
+      "bytes": 402761
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "26fa1d42ccd98010d5fcf701dd10069e761b034c",
+      "url": "https://codeload.github.com/pypa/packaging/zip/26fa1d42ccd98010d5fcf701dd10069e761b034c",
+      "sha256": "3867a39f977cf984f6d5b5d8ba51bba7b445ac47566a5befb1f88ce9972fe1c2",
+      "bytes": 406673
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "283811bffee5da95bda6d5332cb88f8b231187a2",
+      "url": "https://codeload.github.com/pypa/packaging/zip/283811bffee5da95bda6d5332cb88f8b231187a2",
+      "sha256": "388982e1db64272c6fdf81e5c707fea9f9b074b21eef17beb0228cfe6f6f5476",
+      "bytes": 321834
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "28c299e8a823600dd66d4adeb7c7cc98e11089d2",
+      "url": "https://codeload.github.com/pypa/packaging/zip/28c299e8a823600dd66d4adeb7c7cc98e11089d2",
+      "sha256": "0a0fda6b1c390c85d90799bb0f45557a7eba29729480345c2f3949f1bbcca066",
+      "bytes": 320827
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "2aada00b158feb36109d77dc91d62baa91f7d400",
+      "url": "https://codeload.github.com/pypa/packaging/zip/2aada00b158feb36109d77dc91d62baa91f7d400",
+      "sha256": "356c3810008d44fa41ad3d529d30e39ec31e4b230d089162f430b5187cd8a31c",
+      "bytes": 412668
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "2c87a33f665828b7aa0f650b1b50243b3ab95695",
+      "url": "https://codeload.github.com/pypa/packaging/zip/2c87a33f665828b7aa0f650b1b50243b3ab95695",
+      "sha256": "174720c00218bd615167b7c3154fa86a5382e84f89d10f00069d74edd523af6a",
+      "bytes": 412446
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+      "url": "https://codeload.github.com/pypa/packaging/zip/458b0ae53e5a4261df851657d147e590b4546eb2",
+      "sha256": "f5c2f27e3902d9a39bd1785ca0e2f63cbf7837c2c2cbdcf13930bc25bd56d423",
+      "bytes": 380447
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "5b583e309996a085ad3b5b045f3bf50a09c11b58",
+      "url": "https://codeload.github.com/pypa/packaging/zip/5b583e309996a085ad3b5b045f3bf50a09c11b58",
+      "sha256": "d5e289b31c34a8748f47f384686c5aae39cf87b53f9eacbfe2da57a2e70a34a2",
+      "bytes": 403120
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "5c163f5382fb6cba408b7c42efb8a03ffa041f4b",
+      "url": "https://codeload.github.com/pypa/packaging/zip/5c163f5382fb6cba408b7c42efb8a03ffa041f4b",
+      "sha256": "d1bbe7150f6759b26b7db8ce73b3031d436004cab3d39db34d697f845eea2e81",
+      "bytes": 320670
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7",
+      "url": "https://codeload.github.com/pypa/packaging/zip/6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7",
+      "sha256": "af5378de84732f66e513492ad07b2007f8dc3e191626ae0dba2508659fec5985",
+      "bytes": 328096
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "664f049980f1873c458de72a449003b83173f445",
+      "url": "https://codeload.github.com/pypa/packaging/zip/664f049980f1873c458de72a449003b83173f445",
+      "sha256": "9e8ce489d112a47f08be27118ff9b5bd6327d02af29158e7ca35fdd89d2c9093",
+      "bytes": 324424
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+      "url": "https://codeload.github.com/pypa/packaging/zip/826426fc88773515fab149a5f6bde85761e57fbb",
+      "sha256": "f07efd2c02cdf8b974d8bef17155bc9b98f7e6d945f9d184dafe07c598a515bd",
+      "bytes": 406444
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "8af75907bf1140071a6a706874fcf1d73cc39c71",
+      "url": "https://codeload.github.com/pypa/packaging/zip/8af75907bf1140071a6a706874fcf1d73cc39c71",
+      "sha256": "6b9e9760cf07868f0959f4cb5c613cca0bd7d872b1930416bbc4f20a1694a2f0",
+      "bytes": 404164
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "959bb79c06cb883bf1ecd1ddc94a079294907e0f",
+      "url": "https://codeload.github.com/pypa/packaging/zip/959bb79c06cb883bf1ecd1ddc94a079294907e0f",
+      "sha256": "2b61c6e199868ce5af59ae2baeaf5973780acb7060d92e143c35360fca4981b6",
+      "bytes": 412168
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "9a11fba3d53215dc2ff08d8e9d0d5780c08fbe8f",
+      "url": "https://codeload.github.com/pypa/packaging/zip/9a11fba3d53215dc2ff08d8e9d0d5780c08fbe8f",
+      "sha256": "367b277224f6e170e72c96af6303ee049c233850ecac1179581fe88437c15aca",
+      "bytes": 366946
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "9c6f09ba6b313a561d6a64d988647ff3115e82ae",
+      "url": "https://codeload.github.com/pypa/packaging/zip/9c6f09ba6b313a561d6a64d988647ff3115e82ae",
+      "sha256": "f9705606d9182812bdf5a4d7913e8cf738c2f0e5fe2cb00fe03a2d878b85c52f",
+      "bytes": 404155
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "a33b2941bf334823ab48b059611158d37da5846e",
+      "url": "https://codeload.github.com/pypa/packaging/zip/a33b2941bf334823ab48b059611158d37da5846e",
+      "sha256": "9e2358491ce05c29801abbb9d281a83338af10667943564cdf0cfc99c44b8241",
+      "bytes": 367759
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "adc6f21199435de1903585f98c0277af66ec02f0",
+      "url": "https://codeload.github.com/pypa/packaging/zip/adc6f21199435de1903585f98c0277af66ec02f0",
+      "sha256": "a53cb948dcb22e4a2b82897b1e267b861917a30fc851b180a6d54ff362bd1af6",
+      "bytes": 327748
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "b19df947aa03658c776e44c3005b9c860d5b5c8d",
+      "url": "https://codeload.github.com/pypa/packaging/zip/b19df947aa03658c776e44c3005b9c860d5b5c8d",
+      "sha256": "6296e8fdd7e633d0aed843595025387b9f3f945d80246843363361d6974c3786",
+      "bytes": 328550
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "ba17fcea2367a70cba21d6bfb0931ae476ee8583",
+      "url": "https://codeload.github.com/pypa/packaging/zip/ba17fcea2367a70cba21d6bfb0931ae476ee8583",
+      "sha256": "808b9aede38c61c9c2528b22c0f12e0dbe838d948b411d034a0c70feacadb92c",
+      "bytes": 321852
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "c4fb81ff6eba16fdd24d50e9d9d002fdbece6dd4",
+      "url": "https://codeload.github.com/pypa/packaging/zip/c4fb81ff6eba16fdd24d50e9d9d002fdbece6dd4",
+      "sha256": "f082c8ec1aab75856c00446f9c090b85a5a986374efabe4ab433fe3d5bccfb29",
+      "bytes": 367636
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "c5b253b24ba5d4c242a73ff19b02ef0833ba5859",
+      "url": "https://codeload.github.com/pypa/packaging/zip/c5b253b24ba5d4c242a73ff19b02ef0833ba5859",
+      "sha256": "1791f57726c6501c44cc5d353c8b64da8bf98b7cbc875576a3d97be66b931e7f",
+      "bytes": 321820
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "d3e7f5d96da0c27103324cb9fb349b54e753a877",
+      "url": "https://codeload.github.com/pypa/packaging/zip/d3e7f5d96da0c27103324cb9fb349b54e753a877",
+      "sha256": "8d3f330670f6fda724fb6d14d33b75fd867da1fa4138a2c07feb71adfa878c87",
+      "bytes": 367140
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "d406cb4dd392d883beb8f25f83dd8f7179b6d504",
+      "url": "https://codeload.github.com/pypa/packaging/zip/d406cb4dd392d883beb8f25f83dd8f7179b6d504",
+      "sha256": "180a562aad850eaddb90a9243bb595029d86c774b36c2184cda8aa36ee1254fb",
+      "bytes": 328291
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "d8e08df11bfa50e987375546eda1f0ee3f27bd41",
+      "url": "https://codeload.github.com/pypa/packaging/zip/d8e08df11bfa50e987375546eda1f0ee3f27bd41",
+      "sha256": "2ed5bc74a3574855ee372114ddc995afd682381274de12da95944362d98bf66f",
+      "bytes": 324872
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "f0620a997147fefd6844af9745c7bf28b43cce29",
+      "url": "https://codeload.github.com/pypa/packaging/zip/f0620a997147fefd6844af9745c7bf28b43cce29",
+      "sha256": "d52345336dfc6ca9f1a82d5b7d33cfc799e3daaf325ebb8b75622d6ee498f1b1",
+      "bytes": 367883
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "ffb76f30eb15753142d6c4b95c693f3e909cf135",
+      "url": "https://codeload.github.com/pypa/packaging/zip/ffb76f30eb15753142d6c4b95c693f3e909cf135",
+      "sha256": "f0236c31980001774bd9bb13843e16ec3b8cfe99e04ccc7f82d3e3f1044c2ec6",
+      "bytes": 321471
+    }
+  ]
+}

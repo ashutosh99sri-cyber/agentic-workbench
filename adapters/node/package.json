@@ -1,0 +1,26 @@
+{
+  "name": "@agentic-workbench/node",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Typed subprocess adapter for the installed Agentic Workbench CLI",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist/index.js", "dist/index.d.ts", "README.md", "LICENSE"],
+  "engines": {"node": ">=24.0.0"},
+  "packageManager": "npm@11.19.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test test/protocol.test.mjs test/package.test.mjs",
+    "test:integration": "node --test test/integration.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "typescript": "7.0.2"
+  }
+}

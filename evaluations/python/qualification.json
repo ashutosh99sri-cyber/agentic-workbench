@@ -1,0 +1,1213 @@
+{
+  "schema_version": 1,
+  "mode": "upstream-behavior-preflight-not-agent-repair",
+  "python_version": "3.11.16",
+  "platform": "macOS arm64 POSIX",
+  "runtime_dependencies": [],
+  "qualified_tasks": 30,
+  "blocked_tasks": [],
+  "live_provider_requests": 0,
+  "estimated_live_provider_cost_usd": 0,
+  "checks": [
+    {
+      "task_id": "more-itertools-bucket-validator",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "1ea82a711c69f590054987b5cb194157f8ce8ac4",
+      "check_sha256": "e3500d118089be22e4dfb934c7c1af33de38573892b07efbd6588d5076243e2a",
+      "exit_code": 1,
+      "elapsed_ms": 86.156,
+      "last_stderr_line": "AssertionError: falsey validator was replaced by permissive default"
+    },
+    {
+      "task_id": "more-itertools-bucket-validator",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "1ea82a711c69f590054987b5cb194157f8ce8ac4",
+      "check_sha256": "9190e773ce7a215c46382178cf5edcab1ab7a92dd01424e95c27ffb759d61411",
+      "exit_code": 1,
+      "elapsed_ms": 67.701,
+      "last_stderr_line": "AssertionError: membership ignored the supplied validator"
+    },
+    {
+      "task_id": "more-itertools-bucket-validator",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "67fcf640477c78605580f5ee703a54c73c1e7a8a",
+      "check_sha256": "e3500d118089be22e4dfb934c7c1af33de38573892b07efbd6588d5076243e2a",
+      "exit_code": 0,
+      "elapsed_ms": 75.223,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-bucket-validator",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "67fcf640477c78605580f5ee703a54c73c1e7a8a",
+      "check_sha256": "9190e773ce7a215c46382178cf5edcab1ab7a92dd01424e95c27ffb759d61411",
+      "exit_code": 0,
+      "elapsed_ms": 105.698,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-custom-exception",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "9ed3dbb0ae527230cd156d91d0af305478558fba",
+      "check_sha256": "95451789a0845456cf87a04242c5122bf955be99bf5d4c43a731810829c251c9",
+      "exit_code": 1,
+      "elapsed_ms": 82.382,
+      "last_stderr_line": "AssertionError: one discarded the supplied falsey exception"
+    },
+    {
+      "task_id": "more-itertools-custom-exception",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "9ed3dbb0ae527230cd156d91d0af305478558fba",
+      "check_sha256": "f6c8f343221ed616dc83bbd7e2e28fd7a1052601a53f35f10ab752c4be5ec873",
+      "exit_code": 1,
+      "elapsed_ms": 63.915,
+      "last_stderr_line": "AssertionError: custom overflow exception was not preserved"
+    },
+    {
+      "task_id": "more-itertools-custom-exception",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "def2dabea858b6ecb84ee0c52e6e07929f2c409c",
+      "check_sha256": "95451789a0845456cf87a04242c5122bf955be99bf5d4c43a731810829c251c9",
+      "exit_code": 0,
+      "elapsed_ms": 71.014,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-custom-exception",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "def2dabea858b6ecb84ee0c52e6e07929f2c409c",
+      "check_sha256": "f6c8f343221ed616dc83bbd7e2e28fd7a1052601a53f35f10ab752c4be5ec873",
+      "exit_code": 0,
+      "elapsed_ms": 99.596,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-batch-limits",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "19ddb972845ab0e5b9b7449d3fd5930781407441",
+      "check_sha256": "e481246f6ef93ba91693edb47480eca774f16d18ed66f3c145c774d1e9648f7a",
+      "exit_code": 1,
+      "elapsed_ms": 78.772,
+      "last_stderr_line": "AssertionError: zero max_count was accepted"
+    },
+    {
+      "task_id": "more-itertools-batch-limits",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "19ddb972845ab0e5b9b7449d3fd5930781407441",
+      "check_sha256": "b2c0b48f78d9f6072c3ab37bac95610ef8c4741694acbf4a62392d16c3730cfc",
+      "exit_code": 1,
+      "elapsed_ms": 74.309,
+      "last_stderr_line": "AssertionError: nonpositive max_count -3 was accepted"
+    },
+    {
+      "task_id": "more-itertools-batch-limits",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "d032cab7798c7a072ecbb8ade4dfa50030c75cb5",
+      "check_sha256": "e481246f6ef93ba91693edb47480eca774f16d18ed66f3c145c774d1e9648f7a",
+      "exit_code": 0,
+      "elapsed_ms": 68.939,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-batch-limits",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "d032cab7798c7a072ecbb8ade4dfa50030c75cb5",
+      "check_sha256": "b2c0b48f78d9f6072c3ab37bac95610ef8c4741694acbf4a62392d16c3730cfc",
+      "exit_code": 0,
+      "elapsed_ms": 100.802,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-seekable-peek",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "ca711220a6657a22655f6fa497524d006a735c5f",
+      "check_sha256": "8ee42f635f768ae96d8615da8660cec86c152414a7a86e8d38884d428531c974",
+      "exit_code": 1,
+      "elapsed_ms": 87.31,
+      "last_stderr_line": "AssertionError: peek consumed an item with maxlen=0"
+    },
+    {
+      "task_id": "more-itertools-seekable-peek",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "ca711220a6657a22655f6fa497524d006a735c5f",
+      "check_sha256": "e6bc912c461fee9a90e6785ce3775f0252f4a1a57d8ecbd309ba4be67af0c815",
+      "exit_code": 1,
+      "elapsed_ms": 74.226,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "more-itertools-seekable-peek",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "6b1907de293a655fb77881bf81948f95fd15bd7c",
+      "check_sha256": "8ee42f635f768ae96d8615da8660cec86c152414a7a86e8d38884d428531c974",
+      "exit_code": 0,
+      "elapsed_ms": 85.659,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-seekable-peek",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "6b1907de293a655fb77881bf81948f95fd15bd7c",
+      "check_sha256": "e6bc912c461fee9a90e6785ce3775f0252f4a1a57d8ecbd309ba4be67af0c815",
+      "exit_code": 0,
+      "elapsed_ms": 99.598,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-running-stability",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "cb75bb9c55f7ed3e77ce599097e1ba8da411746d",
+      "check_sha256": "b3d1fdf482df98b83b5f304bb8532f6b84317373999b594f5232da36c199d0ba",
+      "exit_code": 1,
+      "elapsed_ms": 82.144,
+      "last_stderr_line": "AssertionError: running_min replaced the earlier equal minimum"
+    },
+    {
+      "task_id": "more-itertools-running-stability",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "cb75bb9c55f7ed3e77ce599097e1ba8da411746d",
+      "check_sha256": "6b177ff3c29084e515e7baf14143d620cc6c311ff9f4c17ed8929c237cb1aace",
+      "exit_code": 1,
+      "elapsed_ms": 72.001,
+      "last_stderr_line": "AssertionError: equal extrema lost their arrival order or failed to expire"
+    },
+    {
+      "task_id": "more-itertools-running-stability",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "d992be0de9383ddcaae3a24866a2d96b52132b07",
+      "check_sha256": "b3d1fdf482df98b83b5f304bb8532f6b84317373999b594f5232da36c199d0ba",
+      "exit_code": 0,
+      "elapsed_ms": 84.564,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-running-stability",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "d992be0de9383ddcaae3a24866a2d96b52132b07",
+      "check_sha256": "6b177ff3c29084e515e7baf14143d620cc6c311ff9f4c17ed8929c237cb1aace",
+      "exit_code": 0,
+      "elapsed_ms": 101.874,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-interleave-empty",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "5d946b3590bfe92f1465c1b9b9830dd434745c84",
+      "check_sha256": "cd5fa3c9d56198a81ee92ccd856fdffdb5165cd9e10dcd18785649fcf47d8f16",
+      "exit_code": 1,
+      "elapsed_ms": 88.072,
+      "last_stderr_line": "IndexError: list index out of range"
+    },
+    {
+      "task_id": "more-itertools-interleave-empty",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "5d946b3590bfe92f1465c1b9b9830dd434745c84",
+      "check_sha256": "f2f28e468d8469e7c928176b5eda134ad7276ce3ccea49e50b35c9bfdb240fe9",
+      "exit_code": 1,
+      "elapsed_ms": 68.573,
+      "last_stderr_line": "IndexError: list index out of range"
+    },
+    {
+      "task_id": "more-itertools-interleave-empty",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "f51a53bfd2fe9504063a33ef5f4a73e30d82d0e2",
+      "check_sha256": "cd5fa3c9d56198a81ee92ccd856fdffdb5165cd9e10dcd18785649fcf47d8f16",
+      "exit_code": 0,
+      "elapsed_ms": 61.849,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "more-itertools-interleave-empty",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "f51a53bfd2fe9504063a33ef5f4a73e30d82d0e2",
+      "check_sha256": "f2f28e468d8469e7c928176b5eda134ad7276ce3ccea49e50b35c9bfdb240fe9",
+      "exit_code": 0,
+      "elapsed_ms": 106.183,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-short-help-abbreviation",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+      "check_sha256": "428c1497a2a06820126fabae3ea7cb8e1718b00ee985280f38f586583cc315b6",
+      "exit_code": 1,
+      "elapsed_ms": 85.958,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "click-short-help-abbreviation",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+      "check_sha256": "97c41fc8fe4aa97b8205c798dadf916315c733d7e5cef92a57bdfff8db8c7a93",
+      "exit_code": 1,
+      "elapsed_ms": 91.606,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "click-short-help-abbreviation",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+      "check_sha256": "428c1497a2a06820126fabae3ea7cb8e1718b00ee985280f38f586583cc315b6",
+      "exit_code": 0,
+      "elapsed_ms": 85.089,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-short-help-abbreviation",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+      "check_sha256": "97c41fc8fe4aa97b8205c798dadf916315c733d7e5cef92a57bdfff8db8c7a93",
+      "exit_code": 0,
+      "elapsed_ms": 71.534,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-sentinel-copy-identity",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "420c8fb44eeadb537cae69d2fee3796e808558dd",
+      "check_sha256": "66a64241cffb4ed676b3fbc53f630a3c0ccb62e9375c2951e8b3227725a7b125",
+      "exit_code": 1,
+      "elapsed_ms": 65.239,
+      "last_stderr_line": "ValueError: <object object at 0x101c90660> is not a valid Sentinel"
+    },
+    {
+      "task_id": "click-sentinel-copy-identity",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "420c8fb44eeadb537cae69d2fee3796e808558dd",
+      "check_sha256": "bf028ca5688193b0eb27de56477261bfe27cc5f48bb43cdc3b380cfcbd6ffa08",
+      "exit_code": 1,
+      "elapsed_ms": 63.383,
+      "last_stderr_line": "ValueError: <object object at 0x1057d8680> is not a valid Sentinel"
+    },
+    {
+      "task_id": "click-sentinel-copy-identity",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "f58ca3e81424a35626c8a475eb59ab95589008ce",
+      "check_sha256": "66a64241cffb4ed676b3fbc53f630a3c0ccb62e9375c2951e8b3227725a7b125",
+      "exit_code": 0,
+      "elapsed_ms": 67.827,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-sentinel-copy-identity",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "f58ca3e81424a35626c8a475eb59ab95589008ce",
+      "check_sha256": "bf028ca5688193b0eb27de56477261bfe27cc5f48bb43cdc3b380cfcbd6ffa08",
+      "exit_code": 0,
+      "elapsed_ms": 61.664,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-palette-zero-and-validation",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
+      "check_sha256": "fafad0a59e64d8ba0128ede2df8ee0156e874c238907803c9dd162cfca542b6a",
+      "exit_code": 1,
+      "elapsed_ms": 62.774,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "click-palette-zero-and-validation",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
+      "check_sha256": "17e485bb77898822acb1ea2f3a52bb9d95f92e1ef945936a01945516f6578df4",
+      "exit_code": 1,
+      "elapsed_ms": 59.578,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "click-palette-zero-and-validation",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
+      "check_sha256": "fafad0a59e64d8ba0128ede2df8ee0156e874c238907803c9dd162cfca542b6a",
+      "exit_code": 0,
+      "elapsed_ms": 60.531,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-palette-zero-and-validation",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
+      "check_sha256": "17e485bb77898822acb1ea2f3a52bb9d95f92e1ef945936a01945516f6578df4",
+      "exit_code": 0,
+      "elapsed_ms": 59.554,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-help-parameter-collision",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "8c1a0a7abbc1c36f70d1f65f3604acc46c5ce6ab",
+      "check_sha256": "ca8ab7c0d9a939db49548b3bcbff4d234961ad075db495481806c6be576a5330",
+      "exit_code": 1,
+      "elapsed_ms": 78.845,
+      "last_stderr_line": "Error: Invalid value for '--help': 'manual' is not a valid boolean. Recognized values: , 0, 1, f, false, n, no, off, on, t, true, y, yes"
+    },
+    {
+      "task_id": "click-help-parameter-collision",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "8c1a0a7abbc1c36f70d1f65f3604acc46c5ce6ab",
+      "check_sha256": "6bcbf1113222993156e5538153b364148b24b307ae800150753210b0f1c0711d",
+      "exit_code": 1,
+      "elapsed_ms": 75.352,
+      "last_stderr_line": "Error: Invalid value for '--help' / '-?': 'chapter' is not a valid boolean. Recognized values: , 0, 1, f, false, n, no, off, on, t, true, y, yes"
+    },
+    {
+      "task_id": "click-help-parameter-collision",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "b67832c2167e5b0ff6764a8c04a0a9087e697b5a",
+      "check_sha256": "ca8ab7c0d9a939db49548b3bcbff4d234961ad075db495481806c6be576a5330",
+      "exit_code": 0,
+      "elapsed_ms": 74.406,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-help-parameter-collision",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "b67832c2167e5b0ff6764a8c04a0a9087e697b5a",
+      "check_sha256": "6bcbf1113222993156e5538153b364148b24b307ae800150753210b0f1c0711d",
+      "exit_code": 0,
+      "elapsed_ms": 80.122,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-optional-choice-synopsis",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "8929d392781c8113bc569f388c15c47b94f86581",
+      "check_sha256": "bcf96109b64ab410245ba9002796a2b2d19a2ae99cb52077420974cd4bacfcb4",
+      "exit_code": 1,
+      "elapsed_ms": 77.448,
+      "last_stderr_line": "  --help  Show this message and exit."
+    },
+    {
+      "task_id": "click-optional-choice-synopsis",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "8929d392781c8113bc569f388c15c47b94f86581",
+      "check_sha256": "ca242f18dbe1ff84752bcec3c1bd15a1c27d6425a48e74be103228399ac21f4f",
+      "exit_code": 1,
+      "elapsed_ms": 71.359,
+      "last_stderr_line": "  --help  Show this message and exit."
+    },
+    {
+      "task_id": "click-optional-choice-synopsis",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "762c97eef7c1b3779678992f26a553a2a8c80793",
+      "check_sha256": "bcf96109b64ab410245ba9002796a2b2d19a2ae99cb52077420974cd4bacfcb4",
+      "exit_code": 0,
+      "elapsed_ms": 76.158,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-optional-choice-synopsis",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "762c97eef7c1b3779678992f26a553a2a8c80793",
+      "check_sha256": "ca242f18dbe1ff84752bcec3c1bd15a1c27d6425a48e74be103228399ac21f4f",
+      "exit_code": 0,
+      "elapsed_ms": 73.698,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-empty-deprecation-help",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "648d7c403829013ade629d63ddbfe808f6b2b770",
+      "check_sha256": "314f7ed05ae3a32004e8cc02547199501e3e1c0cf7a158e769c0876721d9861f",
+      "exit_code": 1,
+      "elapsed_ms": 68.875,
+      "last_stderr_line": "AssertionError: ' (DEPRECATED)'"
+    },
+    {
+      "task_id": "click-empty-deprecation-help",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "648d7c403829013ade629d63ddbfe808f6b2b770",
+      "check_sha256": "e5dd829be357d56e9768db81b8a762a1271a551680cf3677294ecba433d98993",
+      "exit_code": 1,
+      "elapsed_ms": 59.833,
+      "last_stderr_line": "AssertionError: [' (DEPRECATED: use modern)']"
+    },
+    {
+      "task_id": "click-empty-deprecation-help",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "82f377c547e1867d073f02bb8f476214d07e245b",
+      "check_sha256": "314f7ed05ae3a32004e8cc02547199501e3e1c0cf7a158e769c0876721d9861f",
+      "exit_code": 0,
+      "elapsed_ms": 65.185,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "click-empty-deprecation-help",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "82f377c547e1867d073f02bb8f476214d07e245b",
+      "check_sha256": "e5dd829be357d56e9768db81b8a762a1271a551680cf3677294ecba433d98993",
+      "exit_code": 0,
+      "elapsed_ms": 62.19,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_empty_arbitrary_requirement",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "2c87a33f665828b7aa0f650b1b50243b3ab95695",
+      "check_sha256": "5732eb7f6029caa5cde07891b79e3e43156e33b06847da8888a58bcb516b9696",
+      "exit_code": 1,
+      "elapsed_ms": 94.408,
+      "last_stderr_line": "AssertionError: An arbitrary requirement version must not be empty"
+    },
+    {
+      "task_id": "packaging_empty_arbitrary_requirement",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "2c87a33f665828b7aa0f650b1b50243b3ab95695",
+      "check_sha256": "10b08ca7564a6498731aae8b382a1f6b1d2cee92c9c3d6c35f0f28999274c552",
+      "exit_code": 1,
+      "elapsed_ms": 89.231,
+      "last_stderr_line": "AssertionError: addon(===)"
+    },
+    {
+      "task_id": "packaging_empty_arbitrary_requirement",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "2aada00b158feb36109d77dc91d62baa91f7d400",
+      "check_sha256": "5732eb7f6029caa5cde07891b79e3e43156e33b06847da8888a58bcb516b9696",
+      "exit_code": 0,
+      "elapsed_ms": 87.498,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_empty_arbitrary_requirement",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "2aada00b158feb36109d77dc91d62baa91f7d400",
+      "check_sha256": "10b08ca7564a6498731aae8b382a1f6b1d2cee92c9c3d6c35f0f28999274c552",
+      "exit_code": 0,
+      "elapsed_ms": 68.11,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_license_ref_case",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "0625596e502163179b9a82796aee82c178efc16d",
+      "check_sha256": "5616d6a75f1e14e77eba242cfdc1dccce0ac3b0de5835fcf755600219f7c5120",
+      "exit_code": 1,
+      "elapsed_ms": 38.702,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "packaging_license_ref_case",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "0625596e502163179b9a82796aee82c178efc16d",
+      "check_sha256": "69167b3d3306b4b3514d8a9cb4a2d5ab94d4694280db2eb6b3aa79cd8fececb6",
+      "exit_code": 1,
+      "elapsed_ms": 39.125,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "packaging_license_ref_case",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "2c87a33f665828b7aa0f650b1b50243b3ab95695",
+      "check_sha256": "5616d6a75f1e14e77eba242cfdc1dccce0ac3b0de5835fcf755600219f7c5120",
+      "exit_code": 0,
+      "elapsed_ms": 36.28,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_license_ref_case",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "2c87a33f665828b7aa0f650b1b50243b3ab95695",
+      "check_sha256": "69167b3d3306b4b3514d8a9cb4a2d5ab94d4694280db2eb6b3aa79cd8fececb6",
+      "exit_code": 0,
+      "elapsed_ms": 37.225,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_wheel_build_newline",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "959bb79c06cb883bf1ecd1ddc94a079294907e0f",
+      "check_sha256": "e9317f7626d39af5814814fab00a8e8dd348959c10d74372b58b43bdc6e188dc",
+      "exit_code": 1,
+      "elapsed_ms": 50.202,
+      "last_stderr_line": "AssertionError: A build component must be consumed completely"
+    },
+    {
+      "task_id": "packaging_wheel_build_newline",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "959bb79c06cb883bf1ecd1ddc94a079294907e0f",
+      "check_sha256": "211c0f916b03fabb6cc5106b8be07138f0a06c41286e84b90a365259c9accb63",
+      "exit_code": 1,
+      "elapsed_ms": 46.445,
+      "last_stderr_line": "trailer"
+    },
+    {
+      "task_id": "packaging_wheel_build_newline",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "0625596e502163179b9a82796aee82c178efc16d",
+      "check_sha256": "e9317f7626d39af5814814fab00a8e8dd348959c10d74372b58b43bdc6e188dc",
+      "exit_code": 0,
+      "elapsed_ms": 49.032,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_wheel_build_newline",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "0625596e502163179b9a82796aee82c178efc16d",
+      "check_sha256": "211c0f916b03fabb6cc5106b8be07138f0a06c41286e84b90a365259c9accb63",
+      "exit_code": 0,
+      "elapsed_ms": 45.805,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_license_drive_path",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "1f334c04c6918789974207733f194e11a47698f5",
+      "check_sha256": "d68af6c69c469d883e839cf6def9698c987bb2ab7d4907db7c5772f672b2e2f3",
+      "exit_code": 1,
+      "elapsed_ms": 88.822,
+      "last_stderr_line": "AssertionError: Drive-relative license paths are not project-relative"
+    },
+    {
+      "task_id": "packaging_license_drive_path",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "1f334c04c6918789974207733f194e11a47698f5",
+      "check_sha256": "e3ae628b8b78f641c12bd210898579b6df96e56715bbdd22299ea5f742514af3",
+      "exit_code": 1,
+      "elapsed_ms": 76.0,
+      "last_stderr_line": "AssertionError: Z:sub/LICENSE"
+    },
+    {
+      "task_id": "packaging_license_drive_path",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "022ae6c6fe5c2ef9615875d0ecfab1ae4024720f",
+      "check_sha256": "d68af6c69c469d883e839cf6def9698c987bb2ab7d4907db7c5772f672b2e2f3",
+      "exit_code": 0,
+      "elapsed_ms": 75.391,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_license_drive_path",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "022ae6c6fe5c2ef9615875d0ecfab1ae4024720f",
+      "check_sha256": "e3ae628b8b78f641c12bd210898579b6df96e56715bbdd22299ea5f742514af3",
+      "exit_code": 0,
+      "elapsed_ms": 72.775,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_invalid_interpreter_tag",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+      "check_sha256": "8820b44da98bfe7de4f5c57a5bcbb221accc3a2102ff3e95e398f95d18de6f9c",
+      "exit_code": 1,
+      "elapsed_ms": 43.907,
+      "last_stderr_line": "AssertionError: An interpreter tag must be a valid identifier"
+    },
+    {
+      "task_id": "packaging_invalid_interpreter_tag",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+      "check_sha256": "efd8c51f86c3ab5b8c682bfefe38d2b0ee7c8007b8cae7652983baf5d4220f67",
+      "exit_code": 1,
+      "elapsed_ms": 45.854,
+      "last_stderr_line": "AssertionError: Every compressed interpreter member must be valid"
+    },
+    {
+      "task_id": "packaging_invalid_interpreter_tag",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "26fa1d42ccd98010d5fcf701dd10069e761b034c",
+      "check_sha256": "8820b44da98bfe7de4f5c57a5bcbb221accc3a2102ff3e95e398f95d18de6f9c",
+      "exit_code": 0,
+      "elapsed_ms": 48.149,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_invalid_interpreter_tag",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "26fa1d42ccd98010d5fcf701dd10069e761b034c",
+      "check_sha256": "efd8c51f86c3ab5b8c682bfefe38d2b0ee7c8007b8cae7652983baf5d4220f67",
+      "exit_code": 0,
+      "elapsed_ms": 47.39,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_wheel_name_newline",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "9c6f09ba6b313a561d6a64d988647ff3115e82ae",
+      "check_sha256": "5d7b991ea553aa08af896613a17ac6c8268889bc751c1d0f70c72b20cd015147",
+      "exit_code": 1,
+      "elapsed_ms": 46.657,
+      "last_stderr_line": "AssertionError: A wheel project name must not end with a newline"
+    },
+    {
+      "task_id": "packaging_wheel_name_newline",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "9c6f09ba6b313a561d6a64d988647ff3115e82ae",
+      "check_sha256": "e7485075d1bf037fb59633c0fe1970e89987f0bbcd24f24daaeeb2f6e513e9d3",
+      "exit_code": 1,
+      "elapsed_ms": 45.293,
+      "last_stderr_line": "AssertionError: alpha_"
+    },
+    {
+      "task_id": "packaging_wheel_name_newline",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "8af75907bf1140071a6a706874fcf1d73cc39c71",
+      "check_sha256": "5d7b991ea553aa08af896613a17ac6c8268889bc751c1d0f70c72b20cd015147",
+      "exit_code": 0,
+      "elapsed_ms": 48.015,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_wheel_name_newline",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "8af75907bf1140071a6a706874fcf1d73cc39c71",
+      "check_sha256": "e7485075d1bf037fb59633c0fe1970e89987f0bbcd24f24daaeeb2f6e513e9d3",
+      "exit_code": 0,
+      "elapsed_ms": 45.113,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_marker_quote_serialization",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "2497782b2bb03812d2a12ae882a4390c61ec5061",
+      "check_sha256": "c0753a7913725528b9b59f440e1001cac44a2e523b14bd96513871f2d4fc08ec",
+      "exit_code": 1,
+      "elapsed_ms": 62.538,
+      "last_stderr_line": "                                ^"
+    },
+    {
+      "task_id": "packaging_marker_quote_serialization",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "2497782b2bb03812d2a12ae882a4390c61ec5061",
+      "check_sha256": "ab38ce4fd3cea4aa974cab2f956c278b4c0d97af548227962a8ea6591e1d4a1f",
+      "exit_code": 1,
+      "elapsed_ms": 59.616,
+      "last_stderr_line": "                             ^"
+    },
+    {
+      "task_id": "packaging_marker_quote_serialization",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "5b583e309996a085ad3b5b045f3bf50a09c11b58",
+      "check_sha256": "c0753a7913725528b9b59f440e1001cac44a2e523b14bd96513871f2d4fc08ec",
+      "exit_code": 0,
+      "elapsed_ms": 74.91,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_marker_quote_serialization",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "5b583e309996a085ad3b5b045f3bf50a09c11b58",
+      "check_sha256": "ab38ce4fd3cea4aa974cab2f956c278b4c0d97af548227962a8ea6591e1d4a1f",
+      "exit_code": 0,
+      "elapsed_ms": 61.859,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_exception_pickle",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+      "check_sha256": "2f6af0b5ce98cbe92e4c4a4e56aea5d27ce974da5253524f16b9ce9877ec7917",
+      "exit_code": 1,
+      "elapsed_ms": 81.972,
+      "last_stderr_line": "TypeError: InvalidMetadata.__init__() missing 1 required positional argument: 'message'"
+    },
+    {
+      "task_id": "packaging_exception_pickle",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+      "check_sha256": "85707e00533c8bddd7122e43792630af610ceda0e33f5ef47ffc45844e7f50b6",
+      "exit_code": 1,
+      "elapsed_ms": 75.295,
+      "last_stderr_line": "TypeError: CyclicDependencyGroup.__init__() missing 2 required positional arguments: 'group' and 'include_group'"
+    },
+    {
+      "task_id": "packaging_exception_pickle",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+      "check_sha256": "2f6af0b5ce98cbe92e4c4a4e56aea5d27ce974da5253524f16b9ce9877ec7917",
+      "exit_code": 0,
+      "elapsed_ms": 75.693,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_exception_pickle",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+      "check_sha256": "85707e00533c8bddd7122e43792630af610ceda0e33f5ef47ffc45844e7f50b6",
+      "exit_code": 0,
+      "elapsed_ms": 73.395,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_tag_field_count",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "a33b2941bf334823ab48b059611158d37da5846e",
+      "check_sha256": "603e70e163826fbca92e98c39f7f37035cf0fb0397a0f8c63c6c54c05eaa2772",
+      "exit_code": 1,
+      "elapsed_ms": 41.59,
+      "last_stderr_line": "AssertionError: ValueError"
+    },
+    {
+      "task_id": "packaging_tag_field_count",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "a33b2941bf334823ab48b059611158d37da5846e",
+      "check_sha256": "683666d95fa9a221609f68e8c138bbc87b8ca28087ce48f4030f11b2430973e1",
+      "exit_code": 1,
+      "elapsed_ms": 39.587,
+      "last_stderr_line": "AssertionError: ValueError"
+    },
+    {
+      "task_id": "packaging_tag_field_count",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "f0620a997147fefd6844af9745c7bf28b43cce29",
+      "check_sha256": "603e70e163826fbca92e98c39f7f37035cf0fb0397a0f8c63c6c54c05eaa2772",
+      "exit_code": 0,
+      "elapsed_ms": 41.823,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_tag_field_count",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "f0620a997147fefd6844af9745c7bf28b43cce29",
+      "check_sha256": "683666d95fa9a221609f68e8c138bbc87b8ca28087ce48f4030f11b2430973e1",
+      "exit_code": 0,
+      "elapsed_ms": 39.787,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_non_string_version",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "9a11fba3d53215dc2ff08d8e9d0d5780c08fbe8f",
+      "check_sha256": "69c757d3698d08e43fbaf8733ce8cd8e2770b8d1cef03949f88293a5f6b08ab6",
+      "exit_code": 1,
+      "elapsed_ms": 34.446,
+      "last_stderr_line": "TypeError: 'NoneType' object is not iterable"
+    },
+    {
+      "task_id": "packaging_non_string_version",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "9a11fba3d53215dc2ff08d8e9d0d5780c08fbe8f",
+      "check_sha256": "2f827c9970e2d44004ce871209c83cbc783b3e28d3858ba12eeed5c829f783b6",
+      "exit_code": 1,
+      "elapsed_ms": 34.651,
+      "last_stderr_line": "TypeError: 'int' object is not iterable"
+    },
+    {
+      "task_id": "packaging_non_string_version",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "d3e7f5d96da0c27103324cb9fb349b54e753a877",
+      "check_sha256": "69c757d3698d08e43fbaf8733ce8cd8e2770b8d1cef03949f88293a5f6b08ab6",
+      "exit_code": 0,
+      "elapsed_ms": 34.606,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_non_string_version",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "d3e7f5d96da0c27103324cb9fb349b54e753a877",
+      "check_sha256": "2f827c9970e2d44004ce871209c83cbc783b3e28d3858ba12eeed5c829f783b6",
+      "exit_code": 0,
+      "elapsed_ms": 33.907,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_nested_marker_serialization",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "c4fb81ff6eba16fdd24d50e9d9d002fdbece6dd4",
+      "check_sha256": "33e5eee74d0ec34ab50d006c633fdaa1f5d39443fa66116cef4db451c9340c16",
+      "exit_code": 1,
+      "elapsed_ms": 57.636,
+      "last_stderr_line": "AssertionError: python_version == \"3.11\" and os_name == \"posix\" or os_name == \"nt\""
+    },
+    {
+      "task_id": "packaging_nested_marker_serialization",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "c4fb81ff6eba16fdd24d50e9d9d002fdbece6dd4",
+      "check_sha256": "75b146cd57122034f8e9c5697789667d4b8698650e4ac008b066c3684213b22a",
+      "exit_code": 1,
+      "elapsed_ms": 56.966,
+      "last_stderr_line": "AssertionError: addons; os_name == \"posix\" and python_version == \"3.11\" or python_version == \"3.12\""
+    },
+    {
+      "task_id": "packaging_nested_marker_serialization",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "0a85b41e24c9b55b83f05ae696d73e8294a5b094",
+      "check_sha256": "33e5eee74d0ec34ab50d006c633fdaa1f5d39443fa66116cef4db451c9340c16",
+      "exit_code": 0,
+      "elapsed_ms": 59.08,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_nested_marker_serialization",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "0a85b41e24c9b55b83f05ae696d73e8294a5b094",
+      "check_sha256": "75b146cd57122034f8e9c5697789667d4b8698650e4ac008b066c3684213b22a",
+      "exit_code": 0,
+      "elapsed_ms": 55.727,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_requirement_hash",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "664f049980f1873c458de72a449003b83173f445",
+      "check_sha256": "98c70572db92807dd020171506f00c7658f328200beb45d03729ae669a06a355",
+      "exit_code": 1,
+      "elapsed_ms": 73.566,
+      "last_stderr_line": "AssertionError: Equal requirements must share a hash"
+    },
+    {
+      "task_id": "packaging_requirement_hash",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "664f049980f1873c458de72a449003b83173f445",
+      "check_sha256": "b79e1cf23fcdc70dc16fa181c33c61fcd3862a0c67a1499f885d60f78d189b7f",
+      "exit_code": 1,
+      "elapsed_ms": 67.211,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "packaging_requirement_hash",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "d8e08df11bfa50e987375546eda1f0ee3f27bd41",
+      "check_sha256": "98c70572db92807dd020171506f00c7658f328200beb45d03729ae669a06a355",
+      "exit_code": 0,
+      "elapsed_ms": 66.166,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_requirement_hash",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "d8e08df11bfa50e987375546eda1f0ee3f27bd41",
+      "check_sha256": "b79e1cf23fcdc70dc16fa181c33c61fcd3862a0c67a1499f885d60f78d189b7f",
+      "exit_code": 0,
+      "elapsed_ms": 58.94,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_normalized_name_double_hyphen",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "283811bffee5da95bda6d5332cb88f8b231187a2",
+      "check_sha256": "9357462f7a325a3a0d2c577a05c00f6366c52578659fe409818a407f3a5f7a72",
+      "exit_code": 1,
+      "elapsed_ms": 55.044,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "packaging_normalized_name_double_hyphen",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "283811bffee5da95bda6d5332cb88f8b231187a2",
+      "check_sha256": "fc1d6afbc92a8b8caa019cc3cffded12bff0429286e65a33f3de030ad03756c7",
+      "exit_code": 1,
+      "elapsed_ms": 51.249,
+      "last_stderr_line": "AssertionError: a--b"
+    },
+    {
+      "task_id": "packaging_normalized_name_double_hyphen",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "ba17fcea2367a70cba21d6bfb0931ae476ee8583",
+      "check_sha256": "9357462f7a325a3a0d2c577a05c00f6366c52578659fe409818a407f3a5f7a72",
+      "exit_code": 0,
+      "elapsed_ms": 46.457,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_normalized_name_double_hyphen",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "ba17fcea2367a70cba21d6bfb0931ae476ee8583",
+      "check_sha256": "fc1d6afbc92a8b8caa019cc3cffded12bff0429286e65a33f3de030ad03756c7",
+      "exit_code": 0,
+      "elapsed_ms": 47.012,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_empty_tag_component",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "ffb76f30eb15753142d6c4b95c693f3e909cf135",
+      "check_sha256": "c401783a4fb41e3b062153213ba5d6d24f38c0d3e05316d637a42862a1541251",
+      "exit_code": 1,
+      "elapsed_ms": 44.791,
+      "last_stderr_line": "AssertionError: Empty ABI must be rejected"
+    },
+    {
+      "task_id": "packaging_empty_tag_component",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "ffb76f30eb15753142d6c4b95c693f3e909cf135",
+      "check_sha256": "34ffb4df09d4f14d95b19674f6bb51fee15b51d1a51978ae282fd40d0ba0a57a",
+      "exit_code": 1,
+      "elapsed_ms": 46.339,
+      "last_stderr_line": "AssertionError: py3.-none-any"
+    },
+    {
+      "task_id": "packaging_empty_tag_component",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "c5b253b24ba5d4c242a73ff19b02ef0833ba5859",
+      "check_sha256": "c401783a4fb41e3b062153213ba5d6d24f38c0d3e05316d637a42862a1541251",
+      "exit_code": 0,
+      "elapsed_ms": 43.638,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_empty_tag_component",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "c5b253b24ba5d4c242a73ff19b02ef0833ba5859",
+      "check_sha256": "34ffb4df09d4f14d95b19674f6bb51fee15b51d1a51978ae282fd40d0ba0a57a",
+      "exit_code": 0,
+      "elapsed_ms": 48.774,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_direct_url_auth",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "28c299e8a823600dd66d4adeb7c7cc98e11089d2",
+      "check_sha256": "23a03a4085fdd51fdb854c94f841f4932d65458ddf5ffd721ee7ec5bd0214194",
+      "exit_code": 1,
+      "elapsed_ms": 38.369,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "packaging_direct_url_auth",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "28c299e8a823600dd66d4adeb7c7cc98e11089d2",
+      "check_sha256": "cc700fd0a6f6da8422547b9b194e6a6812dd95963765b1d08d6beb65ba799d4c",
+      "exit_code": 1,
+      "elapsed_ms": 38.31,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "packaging_direct_url_auth",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "08bb047794f4e70b157dacef4538b3a6e3492743",
+      "check_sha256": "23a03a4085fdd51fdb854c94f841f4932d65458ddf5ffd721ee7ec5bd0214194",
+      "exit_code": 0,
+      "elapsed_ms": 37.907,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_direct_url_auth",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "08bb047794f4e70b157dacef4538b3a6e3492743",
+      "check_sha256": "cc700fd0a6f6da8422547b9b194e6a6812dd95963765b1d08d6beb65ba799d4c",
+      "exit_code": 0,
+      "elapsed_ms": 36.601,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_requirement_pickle_prereleases",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "20262cf73c9a3b55eea0ce305fb5a8111911ef3c",
+      "check_sha256": "2f03c450595be4736aa68556bcb1820b2208f91515dad51a5f259988d1efcf6f",
+      "exit_code": 1,
+      "elapsed_ms": 62.112,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "packaging_requirement_pickle_prereleases",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "20262cf73c9a3b55eea0ce305fb5a8111911ef3c",
+      "check_sha256": "46e693eeccaae00dbfda5bdf7dfa73520f5a95f38dfdecf87e2dfcc68359b832",
+      "exit_code": 1,
+      "elapsed_ms": 63.795,
+      "last_stderr_line": "AssertionError"
+    },
+    {
+      "task_id": "packaging_requirement_pickle_prereleases",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "5c163f5382fb6cba408b7c42efb8a03ffa041f4b",
+      "check_sha256": "2f03c450595be4736aa68556bcb1820b2208f91515dad51a5f259988d1efcf6f",
+      "exit_code": 0,
+      "elapsed_ms": 62.85,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_requirement_pickle_prereleases",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "5c163f5382fb6cba408b7c42efb8a03ffa041f4b",
+      "check_sha256": "46e693eeccaae00dbfda5bdf7dfa73520f5a95f38dfdecf87e2dfcc68359b832",
+      "exit_code": 0,
+      "elapsed_ms": 64.508,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_malformed_marker_literal",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "adc6f21199435de1903585f98c0277af66ec02f0",
+      "check_sha256": "8395591035d7a1ace0607f1f85ed9e25297f73b39e9e9c3f5a238716f3235c08",
+      "exit_code": 1,
+      "elapsed_ms": 65.487,
+      "last_stderr_line": "SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 0-1: truncated \\xXX escape"
+    },
+    {
+      "task_id": "packaging_malformed_marker_literal",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "adc6f21199435de1903585f98c0277af66ec02f0",
+      "check_sha256": "66aa14ab09dea0d5e7ea537212d5d58fdf4ab5f9cbdf481831cf7e0e7f6f1d7b",
+      "exit_code": 1,
+      "elapsed_ms": 62.494,
+      "last_stderr_line": "SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 0-3: truncated \\uXXXX escape"
+    },
+    {
+      "task_id": "packaging_malformed_marker_literal",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7",
+      "check_sha256": "8395591035d7a1ace0607f1f85ed9e25297f73b39e9e9c3f5a238716f3235c08",
+      "exit_code": 0,
+      "elapsed_ms": 60.184,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_malformed_marker_literal",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7",
+      "check_sha256": "66aa14ab09dea0d5e7ea537212d5d58fdf4ab5f9cbdf481831cf7e0e7f6f1d7b",
+      "exit_code": 0,
+      "elapsed_ms": 56.476,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_missing_marker_environment",
+      "phase": "buggy",
+      "check": "reproduction",
+      "commit": "d406cb4dd392d883beb8f25f83dd8f7179b6d504",
+      "check_sha256": "e537a74a7d04f36c13c17656acc0d5bdb51a0d9d2ba27c9a6deeb894cfdb25e6",
+      "exit_code": 1,
+      "elapsed_ms": 99.513,
+      "last_stderr_line": "KeyError: 'extra'"
+    },
+    {
+      "task_id": "packaging_missing_marker_environment",
+      "phase": "buggy",
+      "check": "holdout",
+      "commit": "d406cb4dd392d883beb8f25f83dd8f7179b6d504",
+      "check_sha256": "d7ae5b2eb5ca7dc879ccad8b3008c76cfc73b3e892b2824867485084b08af9e8",
+      "exit_code": 1,
+      "elapsed_ms": 63.626,
+      "last_stderr_line": "KeyError: 'extra'"
+    },
+    {
+      "task_id": "packaging_missing_marker_environment",
+      "phase": "fixed",
+      "check": "reproduction",
+      "commit": "b19df947aa03658c776e44c3005b9c860d5b5c8d",
+      "check_sha256": "e537a74a7d04f36c13c17656acc0d5bdb51a0d9d2ba27c9a6deeb894cfdb25e6",
+      "exit_code": 0,
+      "elapsed_ms": 64.267,
+      "last_stderr_line": null
+    },
+    {
+      "task_id": "packaging_missing_marker_environment",
+      "phase": "fixed",
+      "check": "holdout",
+      "commit": "b19df947aa03658c776e44c3005b9c860d5b5c8d",
+      "check_sha256": "d7ae5b2eb5ca7dc879ccad8b3008c76cfc73b3e892b2824867485084b08af9e8",
+      "exit_code": 0,
+      "elapsed_ms": 62.342,
+      "last_stderr_line": null
+    }
+  ]
+}

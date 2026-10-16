@@ -1,0 +1,58 @@
+name: Bug report
+description: Report a reproducible non-security defect with redacted evidence.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use synthetic inputs and a disposable workspace. Do not post suspected vulnerabilities here; follow SECURITY.md and keep the report private until a verified owner channel is available.
+        Never include credentials, private source, .agentic/ state dumps, approval digests, raw provider payloads or unredacted environment output. Public support is not operational until the owner configures it; no response time is promised.
+  - type: input
+    id: revision
+    attributes:
+      label: Exact version and revision
+      description: Include agentic --version, Git commit, install method and adapter version if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: platform
+    attributes:
+      label: Platform and prerequisites
+      description: OS, architecture, Python, and relevant Node/TypeScript/Docker versions. State which optional dependencies or acceptance variables were enabled.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Copyable commands and synthetic input in a disposable workspace; include the failing test if available.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: Describe both outcomes and include the error code, if any.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted trace and test evidence
+      description: Review all text and attachments for secrets. Include exact checks, results and skipped prerequisites; explain if no safe trace is available.
+    validations:
+      required: true
+  - type: textarea
+    id: effects
+    attributes:
+      label: Source, network and budget effects
+      description: State whether source changed, a process/container ran, a provider request occurred, or spending/ambiguous effects are possible. Use none or unknown explicitly; do not include approval values.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safe public report
+      options:
+        - label: I checked this report and attachments for secrets/private data and am not disclosing a suspected vulnerability publicly.
+          required: true

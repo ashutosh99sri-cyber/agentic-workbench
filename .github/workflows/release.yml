@@ -1,0 +1,121 @@
+name: Manual release verification
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Existing pushed vX.Y.Z tag to verify (enter X.Y.Z)
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      commit: ${{ steps.release.outputs.commit }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Resolve the exact release tag to an immutable commit
+        id: release
+        shell: bash
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          if [[ ! "$RELEASE_VERSION" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
+            echo 'Release version must use X.Y.Z without a v prefix or leading zeros' >&2
+            exit 1
+          fi
+          RELEASE_TAG="refs/tags/v${RELEASE_VERSION}"
+          RELEASE_COMMIT="$(git rev-parse --verify --end-of-options "${RELEASE_TAG}^{commit}")"
+          [[ "$RELEASE_COMMIT" =~ ^[a-f0-9]{40}$ ]]
+          printf 'commit=%s\n' "$RELEASE_COMMIT" >> "$GITHUB_OUTPUT"
+  acceptance:
+    needs: prepare
+    uses: ./.github/workflows/ci.yml
+    with:
+      source_ref: ${{ needs.prepare.outputs.commit }}
+  package:
+    needs: [prepare, acceptance]
+    runs-on: ubuntu-latest
+    env:
+      RELEASE_VERSION: ${{ inputs.version }}
+      RELEASE_COMMIT: ${{ needs.prepare.outputs.commit }}
+      NODE_IMAGE: node@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20
+      PYTHON_IMAGE: python@sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          ref: ${{ needs.prepare.outputs.commit }}
+      - run: test "$(git rev-parse HEAD)" = "$RELEASE_COMMIT"
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.12.5'
+          python-version: '3.12'
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+        with:
+          node-version: '26.7.0'
+      - run: uv sync --locked --all-extras
+      - run: uv run --locked python scripts/check_release.py --expected-version "$RELEASE_VERSION"
+      - run: uv build
+      - name: Install clean wheel and source distribution consumers
+        run: |
+          uv venv /tmp/agentic-release
+          uv pip install --python /tmp/agentic-release/bin/python dist/*.whl
+          uv venv /tmp/agentic-release-sdist
+          uv pip install --python /tmp/agentic-release-sdist/bin/python dist/*.tar.gz
+      - name: Verify clean wheel and source distribution consumers
+        working-directory: ${{ runner.temp }}
+        run: |
+          /tmp/agentic-release/bin/python "$GITHUB_WORKSPACE/scripts/verify_distribution.py" --expected-version "$RELEASE_VERSION"
+          /tmp/agentic-release-sdist/bin/python "$GITHUB_WORKSPACE/scripts/verify_distribution.py" --expected-version "$RELEASE_VERSION"
+      - name: Verify installed SDK typing and offline walkthrough
+        run: |
+          uv run --locked pytest tests/test_packaging.py -m distribution -W error
+          /tmp/agentic-release/bin/python examples/sdk_walkthrough.py --execute
+        env:
+          AGENTIC_INSTALLED_PYTHON: /tmp/agentic-release/bin/python
+      - run: npm ci --ignore-scripts
+        working-directory: adapters/node
+      - run: npm run build
+        working-directory: adapters/node
+      - run: npm test
+        working-directory: adapters/node
+      - run: npm run test:integration
+        working-directory: adapters/node
+        env:
+          AGENTIC_EXECUTABLE: /tmp/agentic-release/bin/agentic
+      - run: node adapters/node/node_modules/typescript/bin/tsc -p examples/typescript_app
+      - run: npm audit --json
+        working-directory: adapters/node
+      - run: npm pack --ignore-scripts --pack-destination "$GITHUB_WORKSPACE/dist"
+        working-directory: adapters/node
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5
+        with:
+          pattern: ci-*
+          path: ${{ runner.temp }}/ci-evidence
+      - name: Record verified source, test evidence and artifact checksums
+        run: |
+          uv run --locked python scripts/record_release_evidence.py \
+            --expected-commit "$RELEASE_COMMIT" --expected-version "$RELEASE_VERSION" \
+            --artifacts dist \
+            --junit "python=$RUNNER_TEMP/ci-evidence/ci-python-ubuntu-latest-3.12/python.xml" \
+            --junit "docker-node=$RUNNER_TEMP/ci-evidence/ci-docker-node/docker-node.xml" \
+            --junit "docker-python=$RUNNER_TEMP/ci-evidence/ci-docker-python/docker-python.xml" \
+            --source-receipt "python=$RUNNER_TEMP/ci-evidence/ci-python-ubuntu-latest-3.12/source.json" \
+            --source-receipt "docker-node=$RUNNER_TEMP/ci-evidence/ci-docker-node/source.json" \
+            --source-receipt "docker-python=$RUNNER_TEMP/ci-evidence/ci-docker-python/source.json" \
+            --python-image "$PYTHON_IMAGE" --node-image "$NODE_IMAGE" \
+            --output dist/release-receipt.json
+          sha256sum dist/* > "$RUNNER_TEMP/SHA256SUMS"
+          mv "$RUNNER_TEMP/SHA256SUMS" dist/SHA256SUMS
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: verified-distributions-${{ inputs.version }}
+          path: dist/
+          retention-days: 7
+          if-no-files-found: error

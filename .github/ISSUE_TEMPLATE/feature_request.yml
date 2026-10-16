@@ -1,0 +1,51 @@
+name: Feature request
+description: Describe a concrete use case and the smallest useful change.
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the user problem and desired behavior. A request does not authorize spending, source mutation or publication.
+        Do not include credentials, private source, .agentic/ state, approval digests or raw provider payloads. Suspected vulnerabilities must stay private under SECURITY.md. Public support requires owner configuration; no response time is promised.
+  - type: input
+    id: revision
+    attributes:
+      label: Exact version and revision
+      description: Include agentic --version and Git commit used to evaluate the current behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: platform
+    attributes:
+      label: Platform and integration
+      description: OS/architecture, Python, and relevant Node/TypeScript/Docker/provider integration; omit credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Use case and current behavior
+      description: Give a synthetic example or reproduction, actual behavior and any safe redacted trace. State if the behavior has not been reproduced.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Expected behavior and smallest useful change
+      description: Explain the user outcome, affected callers and compatibility concerns. Include alternatives already tried.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Acceptance and test evidence
+      description: Give a concrete success check, existing test results and any platform or prerequisite gaps.
+    validations:
+      required: true
+  - type: textarea
+    id: effects
+    attributes:
+      label: Permission and budget effects
+      description: Could this require source writes, execution, network requests or provider cost? State none or unknown explicitly; propose limits without including secrets or approval values.
+    validations:
+      required: true

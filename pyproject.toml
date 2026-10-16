@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=84,<85", "setuptools-scm>=8,<12"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-workbench"
+dynamic = ["version"]
+description = "Skill-driven agents with source evidence, explicit permissions, and reviewable changes"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+keywords = ["agents", "developer-tools", "sdk", "source-evidence", "permissions"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Typing :: Typed",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ["jsonschema>=4.26,<5", "pathspec>=1.1,<2"]
+
+[project.optional-dependencies]
+openai = ["openai==3.29.0", "httpx2==2.13.1"]
+
+[project.scripts]
+agentic = "agentic_workbench.cli:main"
+agentic-workbench = "agentic_workbench.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=9.1,<10", "pytest-cov>=6,<10", "ruff>=0.17,<0.18", "mypy>=2.4,<3", "build>=1.6,<2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+agentic_workbench = ["parsers/*.mjs", "py.typed", "schemas/*.json", "bundled_skills/*/*.toml", "bundled_skills/*/*.md"]
+
+[tool.setuptools_scm]
+fallback_version = "0.1.0.dev0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["docker: requires a local Docker engine and an explicitly supplied pinned image", "distribution: requires a clean installed package Python path"]
+addopts = "--strict-markers"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S603", "S607"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["jsonschema.*"]
+ignore_missing_imports = true

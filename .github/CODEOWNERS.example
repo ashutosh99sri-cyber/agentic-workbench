@@ -1,0 +1,7 @@
+# Inactive example: GitHub reads CODEOWNERS, not CODEOWNERS.example.
+# Replace OWNER_HANDLE with verified repository reviewers before copying and
+# uncommenting these rules as .github/CODEOWNERS. Do not leave placeholders active.
+# * @OWNER_HANDLE
+# /SECURITY.md @SECURITY_REVIEWER_HANDLE
+# /src/agentic_workbench/policy.py @SECURITY_REVIEWER_HANDLE
+# /.github/workflows/ @RELEASE_OWNER_HANDLE

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability privately
+    url: https://github.com/ashutosh99sri-cyber/agentic-workbench/security/advisories/new
+    about: Use GitHub private reporting for suspected vulnerabilities; keep sensitive details out of public issues.
+  - name: Report a conduct concern privately
+    url: https://github.com/ashutosh99sri-cyber/agentic-workbench/blob/main/CODE_OF_CONDUCT.md
+    about: Owner-authorized private contact for community conduct concerns.

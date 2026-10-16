@@ -1,0 +1,12 @@
+flowchart TD
+  Host[CLI / SDK / Node / MCP] --> Policy[Workspace policy + fresh source]
+  Policy --> Index[Index + context selection]
+  Index --> Runtime[Agent and execution loop]
+  Runtime <--> State[Private SQLite state]
+  Runtime <--> Provider[Optional provider]
+  Runtime --> Proposal[Reviewable proposal]
+  Proposal --> Human[Human exact approval]
+  Human --> Writer[Guarded writer + recovery]
+  Human --> Runner[Approved command Runner]
+  Runner --> Receipt[Verification receipt]
+  Receipt --> State

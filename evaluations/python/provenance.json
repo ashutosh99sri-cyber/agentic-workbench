@@ -1,0 +1,1106 @@
+{
+  "schema_version": 1,
+  "method": "Independently authored checks after inspection of official upstream commit diffs; no upstream tests copied.",
+  "fixing_commits": [
+    {
+      "task_id": "more-itertools-bucket-validator",
+      "url": "https://github.com/more-itertools/more-itertools/commit/67fcf640477c78605580f5ee703a54c73c1e7a8a"
+    },
+    {
+      "task_id": "more-itertools-custom-exception",
+      "url": "https://github.com/more-itertools/more-itertools/commit/def2dabea858b6ecb84ee0c52e6e07929f2c409c"
+    },
+    {
+      "task_id": "more-itertools-batch-limits",
+      "url": "https://github.com/more-itertools/more-itertools/commit/d032cab7798c7a072ecbb8ade4dfa50030c75cb5"
+    },
+    {
+      "task_id": "more-itertools-seekable-peek",
+      "url": "https://github.com/more-itertools/more-itertools/commit/6b1907de293a655fb77881bf81948f95fd15bd7c"
+    },
+    {
+      "task_id": "more-itertools-running-stability",
+      "url": "https://github.com/more-itertools/more-itertools/commit/d992be0de9383ddcaae3a24866a2d96b52132b07"
+    },
+    {
+      "task_id": "more-itertools-interleave-empty",
+      "url": "https://github.com/more-itertools/more-itertools/commit/f51a53bfd2fe9504063a33ef5f4a73e30d82d0e2"
+    },
+    {
+      "task_id": "click-short-help-abbreviation",
+      "url": "https://github.com/pallets/click/commit/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e"
+    },
+    {
+      "task_id": "click-sentinel-copy-identity",
+      "url": "https://github.com/pallets/click/commit/f58ca3e81424a35626c8a475eb59ab95589008ce"
+    },
+    {
+      "task_id": "click-palette-zero-and-validation",
+      "url": "https://github.com/pallets/click/commit/07c909f23f0f83b5ca137c167b9a134d66201f67"
+    },
+    {
+      "task_id": "click-help-parameter-collision",
+      "url": "https://github.com/pallets/click/commit/b67832c2167e5b0ff6764a8c04a0a9087e697b5a"
+    },
+    {
+      "task_id": "click-optional-choice-synopsis",
+      "url": "https://github.com/pallets/click/commit/762c97eef7c1b3779678992f26a553a2a8c80793"
+    },
+    {
+      "task_id": "click-empty-deprecation-help",
+      "url": "https://github.com/pallets/click/commit/82f377c547e1867d073f02bb8f476214d07e245b"
+    },
+    {
+      "task_id": "packaging_empty_arbitrary_requirement",
+      "url": "https://github.com/pypa/packaging/commit/2aada00b158feb36109d77dc91d62baa91f7d400"
+    },
+    {
+      "task_id": "packaging_license_ref_case",
+      "url": "https://github.com/pypa/packaging/commit/2c87a33f665828b7aa0f650b1b50243b3ab95695"
+    },
+    {
+      "task_id": "packaging_wheel_build_newline",
+      "url": "https://github.com/pypa/packaging/commit/0625596e502163179b9a82796aee82c178efc16d"
+    },
+    {
+      "task_id": "packaging_license_drive_path",
+      "url": "https://github.com/pypa/packaging/commit/022ae6c6fe5c2ef9615875d0ecfab1ae4024720f"
+    },
+    {
+      "task_id": "packaging_invalid_interpreter_tag",
+      "url": "https://github.com/pypa/packaging/commit/26fa1d42ccd98010d5fcf701dd10069e761b034c"
+    },
+    {
+      "task_id": "packaging_wheel_name_newline",
+      "url": "https://github.com/pypa/packaging/commit/8af75907bf1140071a6a706874fcf1d73cc39c71"
+    },
+    {
+      "task_id": "packaging_marker_quote_serialization",
+      "url": "https://github.com/pypa/packaging/commit/5b583e309996a085ad3b5b045f3bf50a09c11b58"
+    },
+    {
+      "task_id": "packaging_exception_pickle",
+      "url": "https://github.com/pypa/packaging/commit/1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f"
+    },
+    {
+      "task_id": "packaging_tag_field_count",
+      "url": "https://github.com/pypa/packaging/commit/f0620a997147fefd6844af9745c7bf28b43cce29"
+    },
+    {
+      "task_id": "packaging_non_string_version",
+      "url": "https://github.com/pypa/packaging/commit/d3e7f5d96da0c27103324cb9fb349b54e753a877"
+    },
+    {
+      "task_id": "packaging_nested_marker_serialization",
+      "url": "https://github.com/pypa/packaging/commit/0a85b41e24c9b55b83f05ae696d73e8294a5b094"
+    },
+    {
+      "task_id": "packaging_requirement_hash",
+      "url": "https://github.com/pypa/packaging/commit/d8e08df11bfa50e987375546eda1f0ee3f27bd41"
+    },
+    {
+      "task_id": "packaging_normalized_name_double_hyphen",
+      "url": "https://github.com/pypa/packaging/commit/ba17fcea2367a70cba21d6bfb0931ae476ee8583"
+    },
+    {
+      "task_id": "packaging_empty_tag_component",
+      "url": "https://github.com/pypa/packaging/commit/c5b253b24ba5d4c242a73ff19b02ef0833ba5859"
+    },
+    {
+      "task_id": "packaging_direct_url_auth",
+      "url": "https://github.com/pypa/packaging/commit/08bb047794f4e70b157dacef4538b3a6e3492743"
+    },
+    {
+      "task_id": "packaging_requirement_pickle_prereleases",
+      "url": "https://github.com/pypa/packaging/commit/5c163f5382fb6cba408b7c42efb8a03ffa041f4b"
+    },
+    {
+      "task_id": "packaging_malformed_marker_literal",
+      "url": "https://github.com/pypa/packaging/commit/6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7"
+    },
+    {
+      "task_id": "packaging_missing_marker_environment",
+      "url": "https://github.com/pypa/packaging/commit/b19df947aa03658c776e44c3005b9c860d5b5c8d"
+    }
+  ],
+  "upstream_licenses": [
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "19ddb972845ab0e5b9b7449d3fd5930781407441",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/19ddb972845ab0e5b9b7449d3fd5930781407441/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "1ea82a711c69f590054987b5cb194157f8ce8ac4",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/1ea82a711c69f590054987b5cb194157f8ce8ac4/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "5d946b3590bfe92f1465c1b9b9830dd434745c84",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/5d946b3590bfe92f1465c1b9b9830dd434745c84/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "67fcf640477c78605580f5ee703a54c73c1e7a8a",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/67fcf640477c78605580f5ee703a54c73c1e7a8a/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "6b1907de293a655fb77881bf81948f95fd15bd7c",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/6b1907de293a655fb77881bf81948f95fd15bd7c/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "9ed3dbb0ae527230cd156d91d0af305478558fba",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/9ed3dbb0ae527230cd156d91d0af305478558fba/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "ca711220a6657a22655f6fa497524d006a735c5f",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/ca711220a6657a22655f6fa497524d006a735c5f/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "cb75bb9c55f7ed3e77ce599097e1ba8da411746d",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/cb75bb9c55f7ed3e77ce599097e1ba8da411746d/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "d032cab7798c7a072ecbb8ade4dfa50030c75cb5",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/d032cab7798c7a072ecbb8ade4dfa50030c75cb5/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "d992be0de9383ddcaae3a24866a2d96b52132b07",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/d992be0de9383ddcaae3a24866a2d96b52132b07/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "def2dabea858b6ecb84ee0c52e6e07929f2c409c",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/def2dabea858b6ecb84ee0c52e6e07929f2c409c/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "commit": "f51a53bfd2fe9504063a33ef5f4a73e30d82d0e2",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+          "url": "https://github.com/more-itertools/more-itertools/blob/f51a53bfd2fe9504063a33ef5f4a73e30d82d0e2/LICENSE"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/07c909f23f0f83b5ca137c167b9a134d66201f67/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "420c8fb44eeadb537cae69d2fee3796e808558dd",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/420c8fb44eeadb537cae69d2fee3796e808558dd/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "648d7c403829013ade629d63ddbfe808f6b2b770",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/648d7c403829013ade629d63ddbfe808f6b2b770/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/6d5bac5c712195cbfa9666ba0ecbf0573cdea356/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "762c97eef7c1b3779678992f26a553a2a8c80793",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/762c97eef7c1b3779678992f26a553a2a8c80793/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/7925a3410d7098c28cfca3b2baa6c852666bbd14/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "82f377c547e1867d073f02bb8f476214d07e245b",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/82f377c547e1867d073f02bb8f476214d07e245b/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "8929d392781c8113bc569f388c15c47b94f86581",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/8929d392781c8113bc569f388c15c47b94f86581/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "8c1a0a7abbc1c36f70d1f65f3604acc46c5ce6ab",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/8c1a0a7abbc1c36f70d1f65f3604acc46c5ce6ab/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "b67832c2167e5b0ff6764a8c04a0a9087e697b5a",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/b67832c2167e5b0ff6764a8c04a0a9087e697b5a/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "f58ca3e81424a35626c8a475eb59ab95589008ce",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/f58ca3e81424a35626c8a475eb59ab95589008ce/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pallets/click",
+      "commit": "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "url": "https://github.com/pallets/click/blob/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "022ae6c6fe5c2ef9615875d0ecfab1ae4024720f",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/022ae6c6fe5c2ef9615875d0ecfab1ae4024720f/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/022ae6c6fe5c2ef9615875d0ecfab1ae4024720f/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/022ae6c6fe5c2ef9615875d0ecfab1ae4024720f/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "0625596e502163179b9a82796aee82c178efc16d",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/0625596e502163179b9a82796aee82c178efc16d/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/0625596e502163179b9a82796aee82c178efc16d/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/0625596e502163179b9a82796aee82c178efc16d/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "08bb047794f4e70b157dacef4538b3a6e3492743",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/08bb047794f4e70b157dacef4538b3a6e3492743/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/08bb047794f4e70b157dacef4538b3a6e3492743/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/08bb047794f4e70b157dacef4538b3a6e3492743/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "0a85b41e24c9b55b83f05ae696d73e8294a5b094",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/0a85b41e24c9b55b83f05ae696d73e8294a5b094/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/0a85b41e24c9b55b83f05ae696d73e8294a5b094/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/0a85b41e24c9b55b83f05ae696d73e8294a5b094/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "1f334c04c6918789974207733f194e11a47698f5",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/1f334c04c6918789974207733f194e11a47698f5/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/1f334c04c6918789974207733f194e11a47698f5/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/1f334c04c6918789974207733f194e11a47698f5/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "20262cf73c9a3b55eea0ce305fb5a8111911ef3c",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/20262cf73c9a3b55eea0ce305fb5a8111911ef3c/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/20262cf73c9a3b55eea0ce305fb5a8111911ef3c/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/20262cf73c9a3b55eea0ce305fb5a8111911ef3c/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "2497782b2bb03812d2a12ae882a4390c61ec5061",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/2497782b2bb03812d2a12ae882a4390c61ec5061/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/2497782b2bb03812d2a12ae882a4390c61ec5061/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/2497782b2bb03812d2a12ae882a4390c61ec5061/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "26fa1d42ccd98010d5fcf701dd10069e761b034c",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/26fa1d42ccd98010d5fcf701dd10069e761b034c/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/26fa1d42ccd98010d5fcf701dd10069e761b034c/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/26fa1d42ccd98010d5fcf701dd10069e761b034c/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "283811bffee5da95bda6d5332cb88f8b231187a2",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/283811bffee5da95bda6d5332cb88f8b231187a2/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/283811bffee5da95bda6d5332cb88f8b231187a2/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/283811bffee5da95bda6d5332cb88f8b231187a2/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "28c299e8a823600dd66d4adeb7c7cc98e11089d2",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/28c299e8a823600dd66d4adeb7c7cc98e11089d2/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/28c299e8a823600dd66d4adeb7c7cc98e11089d2/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/28c299e8a823600dd66d4adeb7c7cc98e11089d2/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "2aada00b158feb36109d77dc91d62baa91f7d400",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/2aada00b158feb36109d77dc91d62baa91f7d400/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/2aada00b158feb36109d77dc91d62baa91f7d400/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/2aada00b158feb36109d77dc91d62baa91f7d400/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "2c87a33f665828b7aa0f650b1b50243b3ab95695",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/2c87a33f665828b7aa0f650b1b50243b3ab95695/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/2c87a33f665828b7aa0f650b1b50243b3ab95695/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/2c87a33f665828b7aa0f650b1b50243b3ab95695/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/458b0ae53e5a4261df851657d147e590b4546eb2/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/458b0ae53e5a4261df851657d147e590b4546eb2/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/458b0ae53e5a4261df851657d147e590b4546eb2/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "5b583e309996a085ad3b5b045f3bf50a09c11b58",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/5b583e309996a085ad3b5b045f3bf50a09c11b58/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/5b583e309996a085ad3b5b045f3bf50a09c11b58/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/5b583e309996a085ad3b5b045f3bf50a09c11b58/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "5c163f5382fb6cba408b7c42efb8a03ffa041f4b",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/5c163f5382fb6cba408b7c42efb8a03ffa041f4b/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/5c163f5382fb6cba408b7c42efb8a03ffa041f4b/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/5c163f5382fb6cba408b7c42efb8a03ffa041f4b/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "664f049980f1873c458de72a449003b83173f445",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/664f049980f1873c458de72a449003b83173f445/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/664f049980f1873c458de72a449003b83173f445/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/664f049980f1873c458de72a449003b83173f445/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/826426fc88773515fab149a5f6bde85761e57fbb/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/826426fc88773515fab149a5f6bde85761e57fbb/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/826426fc88773515fab149a5f6bde85761e57fbb/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "8af75907bf1140071a6a706874fcf1d73cc39c71",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/8af75907bf1140071a6a706874fcf1d73cc39c71/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/8af75907bf1140071a6a706874fcf1d73cc39c71/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/8af75907bf1140071a6a706874fcf1d73cc39c71/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "959bb79c06cb883bf1ecd1ddc94a079294907e0f",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/959bb79c06cb883bf1ecd1ddc94a079294907e0f/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/959bb79c06cb883bf1ecd1ddc94a079294907e0f/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/959bb79c06cb883bf1ecd1ddc94a079294907e0f/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "9a11fba3d53215dc2ff08d8e9d0d5780c08fbe8f",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/9a11fba3d53215dc2ff08d8e9d0d5780c08fbe8f/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/9a11fba3d53215dc2ff08d8e9d0d5780c08fbe8f/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/9a11fba3d53215dc2ff08d8e9d0d5780c08fbe8f/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "9c6f09ba6b313a561d6a64d988647ff3115e82ae",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/9c6f09ba6b313a561d6a64d988647ff3115e82ae/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/9c6f09ba6b313a561d6a64d988647ff3115e82ae/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/9c6f09ba6b313a561d6a64d988647ff3115e82ae/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "a33b2941bf334823ab48b059611158d37da5846e",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/a33b2941bf334823ab48b059611158d37da5846e/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/a33b2941bf334823ab48b059611158d37da5846e/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/a33b2941bf334823ab48b059611158d37da5846e/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "adc6f21199435de1903585f98c0277af66ec02f0",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/adc6f21199435de1903585f98c0277af66ec02f0/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/adc6f21199435de1903585f98c0277af66ec02f0/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/adc6f21199435de1903585f98c0277af66ec02f0/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "b19df947aa03658c776e44c3005b9c860d5b5c8d",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/b19df947aa03658c776e44c3005b9c860d5b5c8d/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/b19df947aa03658c776e44c3005b9c860d5b5c8d/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/b19df947aa03658c776e44c3005b9c860d5b5c8d/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "ba17fcea2367a70cba21d6bfb0931ae476ee8583",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/ba17fcea2367a70cba21d6bfb0931ae476ee8583/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/ba17fcea2367a70cba21d6bfb0931ae476ee8583/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/ba17fcea2367a70cba21d6bfb0931ae476ee8583/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "c4fb81ff6eba16fdd24d50e9d9d002fdbece6dd4",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/c4fb81ff6eba16fdd24d50e9d9d002fdbece6dd4/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/c4fb81ff6eba16fdd24d50e9d9d002fdbece6dd4/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/c4fb81ff6eba16fdd24d50e9d9d002fdbece6dd4/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "c5b253b24ba5d4c242a73ff19b02ef0833ba5859",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/c5b253b24ba5d4c242a73ff19b02ef0833ba5859/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/c5b253b24ba5d4c242a73ff19b02ef0833ba5859/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/c5b253b24ba5d4c242a73ff19b02ef0833ba5859/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "d3e7f5d96da0c27103324cb9fb349b54e753a877",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/d3e7f5d96da0c27103324cb9fb349b54e753a877/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/d3e7f5d96da0c27103324cb9fb349b54e753a877/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/d3e7f5d96da0c27103324cb9fb349b54e753a877/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "d406cb4dd392d883beb8f25f83dd8f7179b6d504",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/d406cb4dd392d883beb8f25f83dd8f7179b6d504/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/d406cb4dd392d883beb8f25f83dd8f7179b6d504/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/d406cb4dd392d883beb8f25f83dd8f7179b6d504/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "d8e08df11bfa50e987375546eda1f0ee3f27bd41",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/d8e08df11bfa50e987375546eda1f0ee3f27bd41/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/d8e08df11bfa50e987375546eda1f0ee3f27bd41/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/d8e08df11bfa50e987375546eda1f0ee3f27bd41/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "f0620a997147fefd6844af9745c7bf28b43cce29",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/f0620a997147fefd6844af9745c7bf28b43cce29/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/f0620a997147fefd6844af9745c7bf28b43cce29/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/f0620a997147fefd6844af9745c7bf28b43cce29/LICENSE.BSD"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/pypa/packaging",
+      "commit": "ffb76f30eb15753142d6c4b95c693f3e909cf135",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "url": "https://github.com/pypa/packaging/blob/ffb76f30eb15753142d6c4b95c693f3e909cf135/LICENSE"
+        },
+        {
+          "path": "LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "url": "https://github.com/pypa/packaging/blob/ffb76f30eb15753142d6c4b95c693f3e909cf135/LICENSE.APACHE"
+        },
+        {
+          "path": "LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "url": "https://github.com/pypa/packaging/blob/ffb76f30eb15753142d6c4b95c693f3e909cf135/LICENSE.BSD"
+        }
+      ]
+    }
+  ]
+}

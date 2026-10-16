@@ -1,0 +1,11 @@
+id = "engineering"
+version = "1.1.0"
+description = "Design reviewable application changes"
+roles = ["engineering"]
+frameworks = []
+languages = []
+required_tools = ["repository_summary", "read_source", "search_code", "list_symbols", "trace_symbol"]
+contract_version = 1
+evidence = "Cite current relative paths, line spans and source hashes. Label inference and unknowns."
+references = []
+provenance = "Agentic Workbench instructions, Apache-2.0, authored 2026-10-14. Decision order adapted from Ponytail (MIT, copyright (c) 2026 DietrichGebert, https://github.com/DietrichGebert/ponytail)."

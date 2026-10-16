@@ -1,0 +1,21 @@
+Agentic Workbench
+
+The project's original contributions are offered under the Apache License,
+Version 2.0. See LICENSE. This notice provides attribution information and
+does not change any license terms or establish copyright ownership.
+
+Ponytail
+Copyright (c) 2026 DietrichGebert
+The bundled engineering skill adapts Ponytail's decision order and engineering
+guidance. Ponytail is licensed under the MIT License.
+Source: https://github.com/DietrichGebert/ponytail
+
+more-itertools
+Copyright (c) 2012 Erik Rose
+The historical repair corpus's negative control contains a small source
+snippet from more-itertools. more-itertools is licensed under the MIT License.
+Source: https://github.com/more-itertools/more-itertools
+
+The complete MIT permission notices for these materials are reproduced in
+THIRD_PARTY_NOTICES.md. Separately installed dependencies retain their own
+licenses; see docs/public/LICENSING.md before redistributing a bundled runtime.

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "candidate_tasks": 30,
+  "accepted_tasks": 30,
+  "rejected_tasks": [],
+  "blocked_tasks": [],
+  "rejected_probe_drafts": [
+    {
+      "task_id": "packaging_marker_quote_serialization",
+      "reason": "An initial holdout draft had invalid Python quoting; corrected before acceptance and rerun both snapshots."
+    },
+    {
+      "task_id": "packaging_normalized_name_double_hyphen",
+      "reason": "The first public input team--addon already passed on buggy source; replaced with independently checked x--y, retaining the distinct normalization defect."
+    },
+    {
+      "task_id": "click-sentinel-copy-identity",
+      "reason": "An initial copy-only draft did not distinguish the snapshots; pickle reproduction and independent holdouts distinguish the defect."
+    }
+  ]
+}

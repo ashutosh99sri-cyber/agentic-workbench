@@ -1,0 +1,11 @@
+id = "testing"
+version = "1.1.0"
+description = "Plan meaningful regression tests"
+roles = ["testing"]
+frameworks = []
+languages = []
+required_tools = ["repository_summary", "read_source", "search_code", "list_symbols", "trace_symbol"]
+contract_version = 1
+evidence = "Cite current relative paths, line spans and source hashes. Label inference and unknowns."
+references = []
+provenance = "Original Agentic Workbench instructions, Apache-2.0, authored 2026-10-14."

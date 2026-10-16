@@ -1,0 +1,20 @@
+include *.md LICENSE NOTICE uv.lock pyproject.toml .gitignore
+recursive-include docs *.md *.json *.svg *.mmd *.pdf
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include examples *.py *.toml *.json *.ts *.mjs *.html *.md
+recursive-include adapters/node/src *.ts
+recursive-include adapters/node/test *.mjs
+include adapters/node/package.json adapters/node/package-lock.json adapters/node/tsconfig.json adapters/node/README.md adapters/node/LICENSE
+recursive-include .github/workflows *.yml
+recursive-include .github/ISSUE_TEMPLATE *.yml
+include .github/PULL_REQUEST_TEMPLATE.md .github/CODEOWNERS.example .github/release-owner.example.json
+global-exclude *.py[cod]
+prune .agentic
+prune examples/.agentic
+prune examples/python_app/.agentic
+prune examples/typescript_app/.agentic
+prune adapters/node/node_modules
+prune adapters/node/dist
+global-exclude .env .env.* .envrc *.env .flaskenv .dev.vars *.pem *.key *.p12 *.pfx
+prune .envs

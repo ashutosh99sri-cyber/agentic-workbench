@@ -1,0 +1,11 @@
+id = "orchestrator"
+version = "1.0.0"
+description = "Coordinate bounded specialist work"
+roles = ["orchestrator"]
+frameworks = []
+languages = []
+required_tools = ["repository_summary", "read_source", "search_code"]
+contract_version = 1
+evidence = "Cite current relative paths, line spans and source hashes. Label inference and unknowns."
+references = []
+provenance = "Original Agentic Workbench instructions, Apache-2.0, authored 2026-10-14."

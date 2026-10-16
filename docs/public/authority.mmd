@@ -1,0 +1,8 @@
+flowchart TD
+  Data[Untrusted source / skills / model output] --> Policy[Host policy + schema checks]
+  Policy --> Proposal[Validated proposal]
+  Grant[Host grant] --> Review[Exact effect review]
+  Proposal --> Review
+  Human[Human approval digest] --> Effect[Guarded effect]
+  Review --> Effect
+  Effect --> Receipt[Durable known or unknown receipt]

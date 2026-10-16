@@ -1,0 +1,17 @@
+{
+  "brand": "WOOKhoop",
+  "project": "WOOKhoop Agentic Workbench",
+  "homepage": "https://www.wookhoop.com/",
+  "observed": {
+    "paper": "#f1f3f4",
+    "ink": "#0b0f14",
+    "blue": "#1854c2",
+    "blue_soft": "#dde7f8",
+    "line": "#d2d8de"
+  },
+  "icon_source": "https://www.wookhoop.com/icon.svg?icon.0it-flsy1tvw6.svg",
+  "css_source": "https://www.wookhoop.com/_next/static/immutable/chunks/28r3z7fns2uk3.css",
+  "formal_brand_guidelines_supplied": false,
+  "font": "Helvetica / system sans documentation substitute; no third-party font redistributed",
+  "rights": "User requested use of WOOKhoop branding. Website branding is provenance, not proof of repository IP ownership."
+}

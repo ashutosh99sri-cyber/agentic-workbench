@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {
+      "id": "more-itertools-bucket-validator",
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "buggy_commit": "1ea82a711c69f590054987b5cb194157f8ce8ac4",
+      "fixed_commit": "67fcf640477c78605580f5ee703a54c73c1e7a8a",
+      "summary": "fix: honour a falsey validator in bucket (#1308)",
+      "license": "MIT",
+      "editable_paths": [
+        "more_itertools/more.py"
+      ],
+      "source_subdir": ".",
+      "reproduction_file": "checks/more_itertools_bucket_validator_reproduction.py",
+      "holdout_file": "checks/more_itertools_bucket_validator_holdout.py",
+      "notes": "Independent behavioral checks; no runtime dependency beyond stdlib. Full archive preserves MIT license."
+    },
+    {
+      "id": "more-itertools-custom-exception",
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "buggy_commit": "9ed3dbb0ae527230cd156d91d0af305478558fba",
+      "fixed_commit": "def2dabea858b6ecb84ee0c52e6e07929f2c409c",
+      "summary": "Fix one()/only() dropping a falsy user-supplied exception",
+      "license": "MIT",
+      "editable_paths": [
+        "more_itertools/more.py"
+      ],
+      "source_subdir": ".",
+      "reproduction_file": "checks/more_itertools_custom_exception_reproduction.py",
+      "holdout_file": "checks/more_itertools_custom_exception_holdout.py",
+      "notes": "Independent behavioral checks; no runtime dependency beyond stdlib. Full archive preserves MIT license."
+    },
+    {
+      "id": "more-itertools-batch-limits",
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "buggy_commit": "19ddb972845ab0e5b9b7449d3fd5930781407441",
+      "fixed_commit": "d032cab7798c7a072ecbb8ade4dfa50030c75cb5",
+      "summary": "fix nonpositive item limits in constrained_batches",
+      "license": "MIT",
+      "editable_paths": [
+        "more_itertools/more.py"
+      ],
+      "source_subdir": ".",
+      "reproduction_file": "checks/more_itertools_batch_limits_reproduction.py",
+      "holdout_file": "checks/more_itertools_batch_limits_holdout.py",
+      "notes": "Independent behavioral checks; no runtime dependency beyond stdlib. Full archive preserves MIT license."
+    },
+    {
+      "id": "more-itertools-seekable-peek",
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "buggy_commit": "ca711220a6657a22655f6fa497524d006a735c5f",
+      "fixed_commit": "6b1907de293a655fb77881bf81948f95fd15bd7c",
+      "summary": "fix: seekable.peek/bool no longer drop items when maxlen is 0",
+      "license": "MIT",
+      "editable_paths": [
+        "more_itertools/more.py"
+      ],
+      "source_subdir": ".",
+      "reproduction_file": "checks/more_itertools_seekable_peek_reproduction.py",
+      "holdout_file": "checks/more_itertools_seekable_peek_holdout.py",
+      "notes": "Independent behavioral checks; no runtime dependency beyond stdlib. Full archive preserves MIT license."
+    },
+    {
+      "id": "more-itertools-running-stability",
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "buggy_commit": "cb75bb9c55f7ed3e77ce599097e1ba8da411746d",
+      "fixed_commit": "d992be0de9383ddcaae3a24866a2d96b52132b07",
+      "summary": "Fix stability in running_min and running_max",
+      "license": "MIT",
+      "editable_paths": [
+        "more_itertools/recipes.py"
+      ],
+      "source_subdir": ".",
+      "reproduction_file": "checks/more_itertools_running_stability_reproduction.py",
+      "holdout_file": "checks/more_itertools_running_stability_holdout.py",
+      "notes": "Independent behavioral checks; no runtime dependency beyond stdlib. Full archive preserves MIT license."
+    },
+    {
+      "id": "more-itertools-interleave-empty",
+      "repo": "https://github.com/more-itertools/more-itertools",
+      "buggy_commit": "5d946b3590bfe92f1465c1b9b9830dd434745c84",
+      "fixed_commit": "f51a53bfd2fe9504063a33ef5f4a73e30d82d0e2",
+      "summary": "fix: handle empty interleave_evenly input",
+      "license": "MIT",
+      "editable_paths": [
+        "more_itertools/more.py"
+      ],
+      "source_subdir": ".",
+      "reproduction_file": "checks/more_itertools_interleave_empty_reproduction.py",
+      "holdout_file": "checks/more_itertools_interleave_empty_holdout.py",
+      "notes": "Independent behavioral checks; no runtime dependency beyond stdlib. Full archive preserves MIT license."
+    },
+    {
+      "id": "click-short-help-abbreviation",
+      "repo": "https://github.com/pallets/click",
+      "buggy_commit": "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+      "fixed_commit": "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+      "summary": "Fix short help abbreviation",
+      "license": "BSD-3-Clause",
+      "editable_paths": [
+        "src/click/utils.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/click_short_help_reproduction.py",
+      "holdout_file": "checks/click_short_help_holdout.py",
+      "notes": "Independent checks authored for this corpus after inspecting official source diffs; no upstream test code copied. Click imports on Python 3.11 without third-party runtime dependencies on POSIX."
+    },
+    {
+      "id": "click-sentinel-copy-identity",
+      "repo": "https://github.com/pallets/click",
+      "buggy_commit": "420c8fb44eeadb537cae69d2fee3796e808558dd",
+      "fixed_commit": "f58ca3e81424a35626c8a475eb59ab95589008ce",
+      "summary": "Fix `copy`, `deepcopy` and `pickle` of `Sentinel` members",
+      "license": "BSD-3-Clause",
+      "editable_paths": [
+        "src/click/_utils.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/click_sentinel_reproduction.py",
+      "holdout_file": "checks/click_sentinel_holdout.py",
+      "notes": "Independent checks authored for this corpus after inspecting official source diffs; no upstream test code copied. Click imports on Python 3.11 without third-party runtime dependencies on POSIX."
+    },
+    {
+      "id": "click-palette-zero-and-validation",
+      "repo": "https://github.com/pallets/click",
+      "buggy_commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
+      "fixed_commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
+      "summary": "Validate style() color arguments, fix explicit black color argument",
+      "license": "BSD-3-Clause",
+      "editable_paths": [
+        "src/click/termui.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/click_color_reproduction.py",
+      "holdout_file": "checks/click_color_holdout.py",
+      "notes": "Independent checks authored for this corpus after inspecting official source diffs; no upstream test code copied. Click imports on Python 3.11 without third-party runtime dependencies on POSIX."
+    },
+    {
+      "id": "click-help-parameter-collision",
+      "repo": "https://github.com/pallets/click",
+      "buggy_commit": "8c1a0a7abbc1c36f70d1f65f3604acc46c5ce6ab",
+      "fixed_commit": "b67832c2167e5b0ff6764a8c04a0a9087e697b5a",
+      "summary": "Fix parsing when a parameter is named help (#3678)",
+      "license": "BSD-3-Clause",
+      "editable_paths": [
+        "src/click/core.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/click_help_name_reproduction.py",
+      "holdout_file": "checks/click_help_name_holdout.py",
+      "notes": "Independent checks authored for this corpus after inspecting official source diffs; no upstream test code copied. Click imports on Python 3.11 without third-party runtime dependencies on POSIX."
+    },
+    {
+      "id": "click-optional-choice-synopsis",
+      "repo": "https://github.com/pallets/click",
+      "buggy_commit": "8929d392781c8113bc569f388c15c47b94f86581",
+      "fixed_commit": "762c97eef7c1b3779678992f26a553a2a8c80793",
+      "summary": "Fix double-bracketing of choices in synopsis",
+      "license": "BSD-3-Clause",
+      "editable_paths": [
+        "src/click/core.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/click_choice_metavar_reproduction.py",
+      "holdout_file": "checks/click_choice_metavar_holdout.py",
+      "notes": "Independent checks authored for this corpus after inspecting official source diffs; no upstream test code copied. Click imports on Python 3.11 without third-party runtime dependencies on POSIX."
+    },
+    {
+      "id": "click-empty-deprecation-help",
+      "repo": "https://github.com/pallets/click",
+      "buggy_commit": "648d7c403829013ade629d63ddbfe808f6b2b770",
+      "fixed_commit": "82f377c547e1867d073f02bb8f476214d07e245b",
+      "summary": "Fix deprecated label formatting",
+      "license": "BSD-3-Clause",
+      "editable_paths": [
+        "src/click/core.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/click_deprecation_reproduction.py",
+      "holdout_file": "checks/click_deprecation_holdout.py",
+      "notes": "Independent checks authored for this corpus after inspecting official source diffs; no upstream test code copied. Click imports on Python 3.11 without third-party runtime dependencies on POSIX."
+    },
+    {
+      "id": "packaging_empty_arbitrary_requirement",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "2c87a33f665828b7aa0f650b1b50243b3ab95695",
+      "fixed_commit": "2aada00b158feb36109d77dc91d62baa91f7d400",
+      "summary": "fix: reject empty arbitrary versions in requirements (#1430)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/specifiers.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_empty_arbitrary_requirement_reproduction.py",
+      "holdout_file": "checks/packaging_empty_arbitrary_requirement_holdout.py"
+    },
+    {
+      "id": "packaging_license_ref_case",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "0625596e502163179b9a82796aee82c178efc16d",
+      "fixed_commit": "2c87a33f665828b7aa0f650b1b50243b3ab95695",
+      "summary": "fix(licenses): canonicalize_license_expression mangling case-distinct LicenseRef identifiers (#1412)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/licenses/__init__.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_license_ref_case_reproduction.py",
+      "holdout_file": "checks/packaging_license_ref_case_holdout.py"
+    },
+    {
+      "id": "packaging_wheel_build_newline",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "959bb79c06cb883bf1ecd1ddc94a079294907e0f",
+      "fixed_commit": "0625596e502163179b9a82796aee82c178efc16d",
+      "summary": "fix: anchor the wheel build tag regex to the end of the part (#1427)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/utils.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_wheel_build_newline_reproduction.py",
+      "holdout_file": "checks/packaging_wheel_build_newline_holdout.py"
+    },
+    {
+      "id": "packaging_license_drive_path",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "1f334c04c6918789974207733f194e11a47698f5",
+      "fixed_commit": "022ae6c6fe5c2ef9615875d0ecfab1ae4024720f",
+      "summary": "fix: reject drive-relative license-file paths in metadata validation (#1382)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/metadata.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_license_drive_path_reproduction.py",
+      "holdout_file": "checks/packaging_license_drive_path_holdout.py"
+    },
+    {
+      "id": "packaging_invalid_interpreter_tag",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+      "fixed_commit": "26fa1d42ccd98010d5fcf701dd10069e761b034c",
+      "summary": "fix: reject invalid interpreter tags (#1351)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/tags.py",
+        "src/packaging/utils.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_invalid_interpreter_tag_reproduction.py",
+      "holdout_file": "checks/packaging_invalid_interpreter_tag_holdout.py"
+    },
+    {
+      "id": "packaging_wheel_name_newline",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "9c6f09ba6b313a561d6a64d988647ff3115e82ae",
+      "fixed_commit": "8af75907bf1140071a6a706874fcf1d73cc39c71",
+      "summary": "fix: wheel filename regex for \\n at end of string (#1341)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/utils.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_wheel_name_newline_reproduction.py",
+      "holdout_file": "checks/packaging_wheel_name_newline_holdout.py"
+    },
+    {
+      "id": "packaging_marker_quote_serialization",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "2497782b2bb03812d2a12ae882a4390c61ec5061",
+      "fixed_commit": "5b583e309996a085ad3b5b045f3bf50a09c11b58",
+      "summary": "fix: preserve marker quote semantics when serializing values (#1213)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/_parser.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_marker_quote_serialization_reproduction.py",
+      "holdout_file": "checks/packaging_marker_quote_serialization_holdout.py"
+    },
+    {
+      "id": "packaging_exception_pickle",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+      "fixed_commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+      "summary": "fix: make InvalidMetadata and CyclicDependencyGroup picklable (#1328)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/metadata.py",
+        "src/packaging/dependency_groups.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_exception_pickle_reproduction.py",
+      "holdout_file": "checks/packaging_exception_pickle_holdout.py"
+    },
+    {
+      "id": "packaging_tag_field_count",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "a33b2941bf334823ab48b059611158d37da5846e",
+      "fixed_commit": "f0620a997147fefd6844af9745c7bf28b43cce29",
+      "summary": "fix(tags): raise InvalidTag for malformed tag field counts (#1238)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/tags.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_tag_field_count_reproduction.py",
+      "holdout_file": "checks/packaging_tag_field_count_holdout.py"
+    },
+    {
+      "id": "packaging_non_string_version",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "9a11fba3d53215dc2ff08d8e9d0d5780c08fbe8f",
+      "fixed_commit": "d3e7f5d96da0c27103324cb9fb349b54e753a877",
+      "summary": "fix(version): reject non-string versions consistently (#1319)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/version.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_non_string_version_reproduction.py",
+      "holdout_file": "checks/packaging_non_string_version_holdout.py"
+    },
+    {
+      "id": "packaging_nested_marker_serialization",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "c4fb81ff6eba16fdd24d50e9d9d002fdbece6dd4",
+      "fixed_commit": "0a85b41e24c9b55b83f05ae696d73e8294a5b094",
+      "summary": "fix(markers): keep parentheses of a nested group when serializing (#1316)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/markers.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_nested_marker_serialization_reproduction.py",
+      "holdout_file": "checks/packaging_nested_marker_serialization_holdout.py"
+    },
+    {
+      "id": "packaging_requirement_hash",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "664f049980f1873c458de72a449003b83173f445",
+      "fixed_commit": "d8e08df11bfa50e987375546eda1f0ee3f27bd41",
+      "summary": "fix(requirements): make Requirement.__hash__ consistent with __eq__ (#1232)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/requirements.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_requirement_hash_reproduction.py",
+      "holdout_file": "checks/packaging_requirement_hash_holdout.py"
+    },
+    {
+      "id": "packaging_normalized_name_double_hyphen",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "283811bffee5da95bda6d5332cb88f8b231187a2",
+      "fixed_commit": "ba17fcea2367a70cba21d6bfb0931ae476ee8583",
+      "summary": "fix(utils): is_normalized_name rejects collapsed double-hyphen names (a--b) (#1230)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/utils.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_normalized_name_double_hyphen_reproduction.py",
+      "holdout_file": "checks/packaging_normalized_name_double_hyphen_holdout.py"
+    },
+    {
+      "id": "packaging_empty_tag_component",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "ffb76f30eb15753142d6c4b95c693f3e909cf135",
+      "fixed_commit": "c5b253b24ba5d4c242a73ff19b02ef0833ba5859",
+      "summary": "fix(utils): reject empty tag components in parse_wheel_filename/parse_tag (#1234)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/tags.py",
+        "src/packaging/utils.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_empty_tag_component_reproduction.py",
+      "holdout_file": "checks/packaging_empty_tag_component_holdout.py"
+    },
+    {
+      "id": "packaging_direct_url_auth",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "28c299e8a823600dd66d4adeb7c7cc98e11089d2",
+      "fixed_commit": "08bb047794f4e70b157dacef4538b3a6e3492743",
+      "summary": "fix: DirectUrl auth stripping with @ in passwords (#1218)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/direct_url.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_direct_url_auth_reproduction.py",
+      "holdout_file": "checks/packaging_direct_url_auth_holdout.py"
+    },
+    {
+      "id": "packaging_requirement_pickle_prereleases",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "20262cf73c9a3b55eea0ce305fb5a8111911ef3c",
+      "fixed_commit": "5c163f5382fb6cba408b7c42efb8a03ffa041f4b",
+      "summary": "fix: preserve Requirement specifier prereleases across pickle (#1206)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/requirements.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_requirement_pickle_prereleases_reproduction.py",
+      "holdout_file": "checks/packaging_requirement_pickle_prereleases_holdout.py"
+    },
+    {
+      "id": "packaging_malformed_marker_literal",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "adc6f21199435de1903585f98c0277af66ec02f0",
+      "fixed_commit": "6115033aa6469c0d0f78e53be5cc47b1fbd4b3e7",
+      "summary": "fix(markers): wrap malformed string literal errors (#1249)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/_parser.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_malformed_marker_literal_reproduction.py",
+      "holdout_file": "checks/packaging_malformed_marker_literal_holdout.py"
+    },
+    {
+      "id": "packaging_missing_marker_environment",
+      "repo": "https://github.com/pypa/packaging",
+      "buggy_commit": "d406cb4dd392d883beb8f25f83dd8f7179b6d504",
+      "fixed_commit": "b19df947aa03658c776e44c3005b9c860d5b5c8d",
+      "summary": "fix(markers): raise UndefinedEnvironmentName (a KeyError subclass) for missing env keys (#1276)",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "editable_paths": [
+        "src/packaging/markers.py"
+      ],
+      "source_subdir": "src",
+      "reproduction_file": "checks/packaging_missing_marker_environment_reproduction.py",
+      "holdout_file": "checks/packaging_missing_marker_environment_holdout.py"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      source_ref:
+        description: Exact source commit SHA to verify (defaults to the event commit)
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    outputs:
+      commit: ${{ steps.source.outputs.commit }}
+    steps:
+      - id: source
+        shell: bash
+        env:
+          SOURCE_REF: ${{ inputs.source_ref || github.sha }}
+        run: |
+          if [[ ! "$SOURCE_REF" =~ ^[a-f0-9]{40}$ ]]; then
+            echo 'CI source_ref must be an immutable full commit SHA' >&2
+            exit 1
+          fi
+          printf 'commit=%s\n' "$SOURCE_REF" >> "$GITHUB_OUTPUT"
+  python:
+    needs: source
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.11', '3.12', '3.13', '3.14']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+          ref: ${{ needs.source.outputs.commit }}
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
+        with:
+          version: '0.12.5'
+          python-version: ${{ matrix.python }}
+      - run: uv sync --locked --all-extras
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: '26.7.0'
+      - run: npm ci --ignore-scripts
+        working-directory: adapters/node
+      - name: Record the verified source
+        run: |
+          uv run --locked python - <<'PYTHON'
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+          directory = Path(os.environ["RUNNER_TEMP"]) / "junit"
+          directory.mkdir()
+          commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          (directory / "source.json").write_text(json.dumps({"commit": commit}) + "\n")
+          PYTHON
+      - run: uv run --locked pytest -m 'not docker and not distribution' -W error --junitxml="$RUNNER_TEMP/junit/python.xml"
+        env:
+          AGENTIC_REQUIRE_TYPESCRIPT: '1'
+      - run: uv run --locked ruff check src tests scripts examples/sdk_walkthrough.py
+      - run: uv run --locked ruff format --check src tests scripts examples/sdk_walkthrough.py
+      - run: uv run --locked mypy src/agentic_workbench
+      - run: uv build
+      - name: Install clean wheel and source distribution consumers
+        run: |
+          uv venv /tmp/agentic-clean
+          uv pip install --python /tmp/agentic-clean/bin/python dist/*.whl
+          uv venv /tmp/agentic-clean-sdist
+          uv pip install --python /tmp/agentic-clean-sdist/bin/python dist/*.tar.gz
+      - name: Verify consumers outside the checkout
+        working-directory: ${{ runner.temp }}
+        run: |
+          /tmp/agentic-clean/bin/python "$GITHUB_WORKSPACE/scripts/verify_distribution.py"
+          /tmp/agentic-clean-sdist/bin/python "$GITHUB_WORKSPACE/scripts/verify_distribution.py"
+      - name: Verify installed SDK typing and offline walkthrough
+        run: |
+          uv run --locked pytest tests/test_packaging.py -m distribution -W error
+          /tmp/agentic-clean/bin/python examples/sdk_walkthrough.py --execute
+        env:
+          AGENTIC_INSTALLED_PYTHON: /tmp/agentic-clean/bin/python
+      - run: uv run --locked python scripts/check_release.py
+      - run: uv audit --locked --output-format json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: ci-python-${{ matrix.os }}-${{ matrix.python }}
+          path: ${{ runner.temp }}/junit/
+          retention-days: 7
+          if-no-files-found: error
+  windows-readonly:
+    needs: source
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+          ref: ${{ needs.source.outputs.commit }}
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.12.5'
+          python-version: '3.12'
+      - run: uv sync --locked --all-extras
+      - run: uv run --locked pytest tests/integration/test_portable_readonly.py tests/test_contracts.py tests/test_config.py tests/test_retrieval.py -W error
+  node:
+    needs: source
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['24.0.0', '26.7.0']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+          ref: ${{ needs.source.outputs.commit }}
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.12.5'
+          python-version: '3.12'
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+        with:
+          node-version: ${{ matrix.node }}
+      - run: uv sync --locked --all-extras
+      - run: uv build
+      - run: |
+          uv venv /tmp/agentic-clean
+          uv pip install --python /tmp/agentic-clean/bin/python dist/*.whl
+      - run: npm ci --ignore-scripts
+        working-directory: adapters/node
+      - run: npm run build
+        working-directory: adapters/node
+      - run: npm test
+        working-directory: adapters/node
+      - run: npm run test:integration
+        working-directory: adapters/node
+        env:
+          AGENTIC_EXECUTABLE: /tmp/agentic-clean/bin/agentic
+      - run: node adapters/node/node_modules/typescript/bin/tsc -p examples/typescript_app
+      - run: uv run --locked pytest 'tests/integration/test_workflow.py::test_actual_regression_apply_test_and_rollback[typescript_app]' -W error
+      - run: npm audit --json
+        working-directory: adapters/node
+  docker-acceptance:
+    needs: source
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - suite: node
+            image: node@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20
+            tests: tests/integration/test_sandbox.py
+          - suite: python
+            image: python@sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce
+            tests: tests/integration/test_python_repair.py
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+          ref: ${{ needs.source.outputs.commit }}
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.12.5'
+          python-version: '3.12'
+      - run: uv sync --locked --all-extras
+      # Provision exact images before Runner; Runner itself must never pull.
+      - run: docker pull "$AGENTIC_DOCKER_IMAGE"
+        env:
+          AGENTIC_DOCKER_IMAGE: ${{ matrix.image }}
+      - name: Record the verified source and provisioned image
+        env:
+          DOCKER_SUITE: ${{ matrix.suite }}
+          AGENTIC_DOCKER_IMAGE: ${{ matrix.image }}
+        run: |
+          uv run --locked python - <<'PYTHON'
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+          directory = Path(os.environ["RUNNER_TEMP"]) / "junit"
+          directory.mkdir()
+          commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          receipt = {"commit": commit, os.environ["DOCKER_SUITE"] + "_image": os.environ["AGENTIC_DOCKER_IMAGE"]}
+          (directory / "source.json").write_text(json.dumps(receipt) + "\n")
+          PYTHON
+      - run: uv run --locked pytest -m docker ${{ matrix.tests }} -W error --junitxml="$RUNNER_TEMP/junit/docker-${{ matrix.suite }}.xml"
+        env:
+          AGENTIC_DOCKER_IMAGE: ${{ matrix.image }}
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: ci-docker-${{ matrix.suite }}
+          path: ${{ runner.temp }}/junit/
+          retention-days: 7
+          if-no-files-found: error

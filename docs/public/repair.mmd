@@ -1,0 +1,10 @@
+flowchart TD
+  Baseline[Review and approve baseline command] --> Run[Run actual check]
+  Run -->|fails meaningfully| Candidate[Propose bounded Python change]
+  Run -->|already passes| Already[Already passing]
+  Candidate --> Review[Review exact diff and digest]
+  Review --> Apply[Approve and apply]
+  Apply --> Check[Review and approve verification]
+  Check --> Result[Run actual check on current snapshot]
+  Result -->|passes| Done[Repaired]
+  Result -->|fails within attempt budget| Candidate

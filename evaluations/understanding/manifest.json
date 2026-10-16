@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "frozen_on": "2026-10-15",
+  "protocol": "Targets and limits declared before the first retrieval run; do not retune on these tasks.",
+  "limits": {"k": 6, "selected_bytes": 16000},
+  "tasks": [
+    {
+      "id": "node-envelope-validation",
+      "source": "workspace",
+      "query": "Reject malformed duplicate or contradictory CLI JSON responses while preserving process failure evidence",
+      "changed_paths": ["adapters/node/src/index.ts"],
+      "targets": {
+        "edited": [{"path": "adapters/node/src/index.ts", "anchor": "function envelope(stdout: string)"}],
+        "callers": [{"path": "adapters/node/src/index.ts", "anchor": "const response = envelope("}],
+        "checks": [
+          {"path": "adapters/node/test/protocol.test.mjs", "anchor": "malformed, incompatible, contradictory and multiple envelopes fail closed"},
+          {"path": "adapters/node/test/fixture-cli.mjs", "anchor": "case \"fixture:nested-duplicate\""}
+        ]
+      }
+    },
+    {
+      "id": "node-credential-forwarding",
+      "source": "workspace",
+      "query": "Forward credentials only for an explicitly authorized provider and remove credentials from nested successful data and diagnostics",
+      "changed_paths": ["adapters/node/src/index.ts"],
+      "targets": {
+        "edited": [{"path": "adapters/node/src/index.ts", "anchor": "private async invoke("}],
+        "callers": [{"path": "adapters/node/test/protocol.test.mjs", "anchor": "const online = await make().explain("}],
+        "checks": [
+          {"path": "adapters/node/test/protocol.test.mjs", "anchor": "minimal environment and explicit provider-only credential forwarding"},
+          {"path": "adapters/node/test/fixture-cli.mjs", "anchor": "case \"fixture:redact\""}
+        ]
+      }
+    },
+    {
+      "id": "python-complete-context-budget",
+      "source": "workspace",
+      "query": "Keep complete serialized context within the byte budget including adapter envelopes, escaping, dependency citations and critical decisions",
+      "changed_paths": ["src/agentic_workbench/context.py"],
+      "targets": {
+        "edited": [{"path": "src/agentic_workbench/context.py", "anchor": "    def build("}],
+        "callers": [
+          {"path": "src/agentic_workbench/agents.py", "anchor": "context = self.context.build("},
+          {"path": "src/agentic_workbench/sdk.py", "anchor": "return ContextManager(self.policy, index, self.store).build("}
+        ],
+        "checks": [{"path": "tests/test_context.py", "anchor": "def test_context_budget_includes_adapter_envelope_and_json_escaping("}]
+      }
+    },
+    {
+      "id": "python-pinned-corpus-archives",
+      "source": "workspace",
+      "query": "Reject cached source archives whose bytes differ from the immutable official source lock before extracting or executing checks",
+      "changed_paths": ["src/agentic_workbench/eval_corpus.py"],
+      "targets": {
+        "edited": [{"path": "src/agentic_workbench/eval_corpus.py", "anchor": "def fetch_archive("}],
+        "callers": [{"path": "src/agentic_workbench/evaluation.py", "anchor": "buggy = materialize("}],
+        "checks": [{"path": "tests/test_eval_corpus.py", "anchor": "def test_cache_is_offline_by_default_and_checks_bytes("}]
+      }
+    },
+    {
+      "id": "historical-falsey-exception",
+      "source": "python-corpus",
+      "corpus_task": "more-itertools-custom-exception",
+      "query": "Preserve an explicitly supplied exception even when it is falsey when exactly one or at most one item is required",
+      "changed_paths": ["more_itertools/more.py"],
+      "targets": {
+        "edited": [{"path": "more_itertools/more.py", "anchor": "def one("}, {"path": "more_itertools/more.py", "anchor": "def only("}],
+        "callers": [{"path": "test_reproduction.py", "anchor": "one("}],
+        "checks": [{"path": "test_reproduction.py", "anchor": "assert"}]
+      }
+    },
+    {
+      "id": "historical-non-string-version",
+      "source": "python-corpus",
+      "corpus_task": "packaging_non_string_version",
+      "query": "Reject non-string package versions with a consistent invalid-version exception instead of leaking a type error",
+      "changed_paths": ["src/packaging/version.py"],
+      "targets": {
+        "edited": [{"path": "src/packaging/version.py", "anchor": "class Version("}],
+        "callers": [{"path": "test_reproduction.py", "anchor": "Version("}],
+        "checks": [{"path": "test_reproduction.py", "anchor": "assert"}]
+      }
+    }
+  ]
+}
