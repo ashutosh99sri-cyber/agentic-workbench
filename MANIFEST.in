@@ -17,4 +17,5 @@ prune examples/typescript_app/.agentic
 prune adapters/node/node_modules
 prune adapters/node/dist
 global-exclude .env .env.* .envrc *.env .flaskenv .dev.vars *.pem *.key *.p12 *.pfx
+global-exclude .npmrc .pypirc .netrc
 prune .envs

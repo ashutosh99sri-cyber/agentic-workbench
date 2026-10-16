@@ -19,6 +19,9 @@ dist/
 .envs/
 *.env
 .dev.vars
+.npmrc
+.pypirc
+.netrc
 *.pem
 *.key
 node_modules/
