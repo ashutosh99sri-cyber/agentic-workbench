@@ -91,7 +91,11 @@ Potential savings are fewer repeated evidence-gathering and recovery chores. Hum
 
 ## Install from a reviewed checkout
 
-There is no verified public PyPI or npm publication to install by name.
+At this guide's 15 October baseline, public registry installation was unverified.
+Version 0.1.0 was subsequently published on PyPI and npm on 17 October; use the
+[current versioned-package instructions](../../README.md#versioned-packages) and
+[release verification](../releases/0.1.0.md). The checkout procedure below remains
+available for source installation.
 
 Requirements: Python 3.11 or later. Guarded writes and runner execution require POSIX. The Node adapter requires Node 24 or later. Docker acceptance needs a trusted local daemon and an already-present approved digest image. Python-only analysis does not require Node.
 
