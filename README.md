@@ -35,8 +35,8 @@ The core works offline. Optional OpenAI Responses and embeddings require a confi
 ## Versioned packages
 
 Version **0.1.0** is the first supervised developer-preview release candidate.
-Registry upload is pending registry account authentication and npm scope ownership.
-After publication, the version-pinned commands are:
+Check [the release status](docs/releases/0.1.0.md) for registry availability.
+Once the registry versions are available, the version-pinned commands are:
 
 ```sh
 python -m pip install "agentic-workbench==0.1.0"
