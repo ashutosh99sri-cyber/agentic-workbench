@@ -3,6 +3,7 @@
 import os
 import re
 import subprocess
+from hashlib import sha256
 from pathlib import Path
 from textwrap import dedent
 
@@ -171,3 +172,49 @@ def test_release_verifies_the_packed_node_distribution_without_install_scripts()
     assert "AGENTIC_NODE_PACKAGE: '@agentic-workbench/node'" in gate
     assert 'node --test "$RUNNER_TEMP/node-consumer/integration.test.mjs"' in gate
     assert "continue-on-error" not in gate and "if:" not in gate
+
+
+def test_pypi_publication_is_manual_scoped_and_credentialless() -> None:
+    publish = (WORKFLOWS / "publish-pypi-010.yml").read_text()
+    assert block(publish, "on:").strip() == "workflow_dispatch:"
+    assert block(publish, "permissions:").strip() == "contents: read"
+    job = block(publish, "  publish:")
+    assert "github.ref == 'refs/heads/main'" in job
+    assert "environment: pypi" in job
+    assert block(job, "    permissions:").strip() == "contents: read\n      id-token: write"
+    assert "uv publish --trusted-publishing always" in job
+    assert "https://upload.pypi.org/legacy/" in job
+    assert "secrets." not in publish and "continue-on-error" not in publish
+    assert "*.tar.gz" not in publish and "*.whl" not in publish
+    for action in re.findall(r"uses: (\S+)", publish):
+        assert re.fullmatch(r"[\w/-]+@[a-f0-9]{40}", action)
+
+
+@pytest.mark.parametrize("tampered", [False, True])
+def test_pypi_download_rejects_tampered_release_bytes(tmp_path: Path, tampered: bool) -> None:
+    publish = (WORKFLOWS / "publish-pypi-010.yml").read_text()
+    script = block(publish, "        run: |")
+    expected = b"reviewed wheel bytes"
+    fixed_digest = "6d14e0ea4ab46acc6331ac0afe213a3e145765c2a7d1530b17fa02229a3961c6"
+    assert fixed_digest in script
+    script = script.replace(fixed_digest, sha256(expected).hexdigest())
+    commands = tmp_path / "bin"
+    commands.mkdir()
+    curl = commands / "curl"
+    curl.write_text(
+        "#!/usr/bin/env python3\n"
+        "import os, sys\n"
+        "from pathlib import Path\n"
+        "Path(sys.argv[sys.argv.index('--output') + 1]).write_bytes("
+        "os.environ['TEST_RELEASE_BYTES'].encode())\n"
+    )
+    curl.chmod(0o755)
+    result = run(
+        script,
+        tmp_path,
+        PATH=str(commands) + os.pathsep + os.environ["PATH"],
+        TEST_RELEASE_BYTES="altered wheel bytes" if tampered else expected.decode(),
+    )
+    assert (result.returncode != 0) is tampered, result.stderr
+    if tampered:
+        assert "checksum mismatch" in result.stderr

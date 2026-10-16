@@ -10,13 +10,12 @@ maintainer responsibility. Prior development history stays local. Runtime file
 hashes are retained in [source provenance](SOURCE-PROVENANCE.json).
 
 The real owner/CODEOWNERS and support records are configured. GitHub private
-vulnerability reporting was enabled and verified through its API; the owner
-separately authorized the private conduct contact in
+vulnerability reporting was enabled and verified through its API; the current conduct intake process requests a private channel through
 [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md). See the
 [actual hosted checks](https://github.com/ashutosh99sri-cyber/agentic-workbench/actions/workflows/ci.yml)
 for current remote acceptance. The local results below do not substitute for
-hosted results. Registry publication, a tagged release, stable support and live
-model heavy-task effectiveness remain separate, uncompleted gates.
+hosted results. The tagged GitHub preview is available; registry publication, stable support and
+live model heavy-task effectiveness remain separate gates.
 
 The dated prepublication reviews below are historical records; their earlier
 unresolved owner/history/contact statuses are superseded by this source-preview

@@ -6,10 +6,11 @@ Reviewed 17 October 2026. Runtime candidate:
 The project is an **experimental, supervised developer toolkit**. It is not
 certified for reliable autonomous heavy engineering tasks. The owner approved
 the Apache-2.0 current-source preview, WOOKhoop brand rights, public destination,
-maintainer responsibility and private conduct contact on 17 October 2026.
+maintainer responsibility on 17 October 2026. The current conduct intake process
+requests a private channel without exposing a personal contact address.
 [Readiness](READINESS.md), [licensing](LICENSING.md) and
 [maintainer setup](../../MAINTAINERS.md) distinguish this source preview from
-future tagged or registry releases. Follow the actual
+tagged and registry releases. Follow the actual
 [hosted CI results](https://github.com/ashutosh99sri-cyber/agentic-workbench/actions/workflows/ci.yml).
 
 ## Verified local acceptance
@@ -81,7 +82,7 @@ third-party notices. The owner confirmed distribution and WOOKhoop brand rights;
 tests do not independently establish legal ownership. The repository is
 [ashutosh99sri-cyber/agentic-workbench](https://github.com/ashutosh99sri-cyber/agentic-workbench).
 The owner is its maintainer, GitHub private vulnerability reporting is enabled,
-and the separately authorized conduct contact is in
+and the private-channel request process for conduct reports is in
 [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md). Actual hosted results remain
 visible in Actions. No registry release or stable support promise is established.
 

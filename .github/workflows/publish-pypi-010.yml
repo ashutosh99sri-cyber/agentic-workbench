@@ -1,0 +1,39 @@
+name: Publish verified PyPI 0.1.0 wheel
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: publish-pypi-010
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: pypi
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.12.5'
+      - name: Download and verify the reviewed release wheel
+        run: |
+          mkdir -p dist
+          curl --fail --location --silent --show-error --output dist/agentic_workbench-0.1.0-py3-none-any.whl \
+            https://github.com/ashutosh99sri-cyber/agentic-workbench/releases/download/v0.1.0/agentic_workbench-0.1.0-py3-none-any.whl
+          python3 - <<'PYTHON'
+          from hashlib import sha256
+          from pathlib import Path
+          wheel = Path('dist/agentic_workbench-0.1.0-py3-none-any.whl')
+          if sha256(wheel.read_bytes()).hexdigest() != '6d14e0ea4ab46acc6331ac0afe213a3e145765c2a7d1530b17fa02229a3961c6':
+              raise SystemExit('Release wheel checksum mismatch')
+          PYTHON
+      - name: Publish the exact wheel through PyPI trusted publishing
+        run: >-
+          uv publish --trusted-publishing always
+          --publish-url https://upload.pypi.org/legacy/
+          --check-url https://pypi.org/simple
+          dist/agentic_workbench-0.1.0-py3-none-any.whl

@@ -86,8 +86,8 @@ Before approving public release, the owner must confirm distribution rights,
 the intended public Git history and author metadata, permission to use WOOKhoop
 branding, and the exact repository/package destinations. The owner must also
 name consenting maintainers and establish and test a real private security
-reporting channel under [SECURITY.md](../../SECURITY.md), plus a private conduct
-reporting route under [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md).
+reporting channel under [SECURITY.md](../../SECURITY.md), plus a conduct intake
+procedure that establishes a private channel before collecting incident details under [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md).
 
 These documents preserve attribution and record release decisions and remaining
 checks. They do not certify legal ownership or replace explicit publication

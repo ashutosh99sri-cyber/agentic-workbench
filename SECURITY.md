@@ -10,7 +10,7 @@ support and reporting URLs are recorded in [.github/release-owner.json](.github/
 Keep suspected vulnerabilities, exploit details, credentials and sensitive traces
 out of public issues and pull requests. If the private form is unavailable,
 retain the details privately until the maintainer restores the channel. Conduct
-concerns follow the separately authorized contact in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+concerns follow the private-channel request procedure in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 Neither policy promises a response time or establishes a security certification.
 
 Include the exact version and Git revision, operating system and runtime, affected trust boundary, minimal reproduction, expected/actual behavior, impact and redacted evidence. Use a disposable repository and synthetic credentials. State whether any request, source write or external effect occurred and whether reproduction could incur provider cost. Share sensitive evidence only through the verified private channel.
