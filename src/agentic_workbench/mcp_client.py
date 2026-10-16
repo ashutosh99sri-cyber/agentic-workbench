@@ -6,7 +6,6 @@ import os
 import select
 import selectors
 import shutil
-import signal
 import subprocess
 import tempfile
 import time
@@ -17,6 +16,7 @@ from .config import CommandConfig
 from .errors import WorkbenchError
 from .models import canonical_hash, canonical_json, strict_json
 from .policy import WorkspacePolicy
+from .runner import _kill
 
 
 class StdioMCPClient:
@@ -188,10 +188,7 @@ class StdioMCPClient:
             finally:
                 selector.close()
                 # Kill descendants even if the MCP parent has exited.
-                try:
-                    os.killpg(process.pid, signal.SIGKILL)
-                except ProcessLookupError:
-                    pass
+                _kill(process)
                 process.wait(timeout=5)
                 process.stdin.close()
                 process.stdout.close()

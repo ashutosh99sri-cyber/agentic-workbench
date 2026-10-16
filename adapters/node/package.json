@@ -1,6 +1,6 @@
 {
   "name": "@agentic-workbench/node",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Typed subprocess adapter for the installed Agentic Workbench CLI",
   "license": "Apache-2.0",
   "type": "module",

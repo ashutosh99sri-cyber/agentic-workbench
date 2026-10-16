@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "agentic-workbench"
 dynamic = ["version"]
 description = "Skill-driven agents with source evidence, explicit permissions, and reviewable changes"
-readme = "README.md"
+readme = "docs/package-readme.md"
 requires-python = ">=3.11"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
@@ -46,7 +46,7 @@ where = ["src"]
 agentic_workbench = ["parsers/*.mjs", "py.typed", "schemas/*.json", "bundled_skills/*/*.toml", "bundled_skills/*/*.md"]
 
 [tool.setuptools_scm]
-fallback_version = "0.1.0.dev0"
+fallback_version = "0.1.1.dev0"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

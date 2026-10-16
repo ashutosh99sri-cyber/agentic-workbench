@@ -3,8 +3,10 @@ import importlib.resources
 import importlib.util
 import json
 import os
+import re
 import subprocess
 import sys
+import tomllib
 from pathlib import Path
 
 import pytest
@@ -25,6 +27,17 @@ def test_public_version_matches_installed_distribution():
 
 def test_package_exposes_typing_marker():
     assert importlib.resources.files("agentic_workbench").joinpath("py.typed").is_file()
+
+
+def test_registry_readme_has_resolvable_links_and_no_publication_status_claims():
+    root = Path(__file__).resolve().parents[1]
+    project = tomllib.loads((root / "pyproject.toml").read_text())["project"]
+    text = (root / project["readme"]).read_text()
+    links = re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", text)
+    assert links and all(link.startswith("https://") for link in links)
+    version = json.loads((root / "adapters/node/package.json").read_text())["version"]
+    assert f"agentic-workbench=={version}" in text
+    assert not any(word in text.lower() for word in ("not published", "once published", "pending"))
 
 
 def test_public_sdk_import_works_in_isolated_python(tmp_path):
